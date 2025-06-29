@@ -30,7 +30,6 @@ jobs:
       - name: 设置 Node.js
         uses: actions/setup-node@v4
         with:
-          cache-dependency-path: package-lock.json
           node-version: 20
           cache: pnpm
 
