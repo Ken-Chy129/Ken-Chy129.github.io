@@ -4,29 +4,21 @@
 export default {
   friendLinks: [
     {
-      label: "站长 - 程序员鱼皮",
+      label: "站长 - Ken",
       // icon: "/icon/user.svg",
-      href: "https://yuyuanweb.feishu.cn/wiki/Abldw5WkjidySxkKxU2cQdAtnah",
+      href: "https://github.com/Ken-Chy129",
     },
     {
-      label: "鱼鸢网络",
-      href: "https://yuyuanweb.com/",
+      label: "Github",
+      href: "https://github.com/Ken-Chy129",
     },
     {
-      label: "老鱼简历",
-      href: "https://www.laoyujianli.com/",
-    },
-    {
-      label: "鱼聪明 AI",
-      href: "https://www.yucongming.com/",
-    },
-    {
-      label: "编程学习圈",
-      href: "https://yuyuanweb.feishu.cn/wiki/VC1qwmX9diCBK3kidyec74vFnde",
+      label: "CSDN",
+      href: "https://blog.csdn.net/qq_25046827",
     },
   ],
   copyright: {
     href: "https://beian.miit.gov.cn/",
-    name: "沪ICP备19026706号-6",
+    name: "粤ICP备2021156849号-1",
   },
 };

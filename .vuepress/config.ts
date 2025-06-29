@@ -132,6 +132,6 @@ export default defineConfig({
     // 底部版权信息
     footer,
     // 额外右侧边栏
-    extraSideBar,
+    // extraSideBar,
   },
 });

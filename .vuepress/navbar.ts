@@ -5,4 +5,8 @@ export default [
         text: "学习路线",
         link: '/学习路线/'
     },
+    {
+        text: "Java",
+        link: '/Java/'
+    },
 ] as NavItem[];

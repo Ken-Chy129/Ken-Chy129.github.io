@@ -2,13 +2,12 @@
 permalink: /
 ---
 
-# 鱼皮的编程宝典
+# 勇者の小栈
 
 > 贴心的编程学习路线，全面的编程知识百科
 >
-> 作者：[程序员鱼皮](https://yuyuanweb.feishu.cn/wiki/Abldw5WkjidySxkKxU2cQdAtnah)
+> 作者：[Ken-Chy129](https://github.com/Ken-Chy129)
 >
-> 本站地址：[https://codefather.cn](https://codefather.cn)
 
 ## 本站内容
 
