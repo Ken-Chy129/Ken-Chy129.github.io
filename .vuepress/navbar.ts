@@ -9,4 +9,8 @@ export default [
         text: "Java",
         link: '/Java/'
     },
+    {
+        text: "Go",
+        link: '/Go/'
+    },
 ] as NavItem[];

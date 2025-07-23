@@ -1,10 +1,10 @@
 export default [
   "",
   {
-    title: "Java",
+    title: "Go",
     collapsable: false,
     children: [
-      "NIO.md",
+      "开始.md",
     ],
   },
 ];
