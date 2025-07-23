@@ -1,8 +1,15 @@
 export default [
   "",
   {
-    title: "Go",
+    title: "Go入门",
     collapsable: false,
+    children: [
+      "开始.md",
+    ],
+  },
+  {
+    title: "Go进阶",
+    collapsable: true,
     children: [
       "开始.md",
     ],
