@@ -5,6 +5,8 @@ export default [
     collapsable: false,
     children: [
       "开始.md",
+      "运行时.md",
+      "包管理.md",
     ],
   },
   {
