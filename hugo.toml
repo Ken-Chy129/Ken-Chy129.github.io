@@ -1,0 +1,104 @@
+baseURL = "https://ken-chy129.github.io/"
+languageCode = "zh-cn"
+defaultContentLanguage = "zh"
+title = "Ken's Blog"
+theme = "PaperMod"
+[pagination]
+  pagerSize = 10
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[minify]
+  disableXML = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params]
+  env = "production"
+  description = "Ken 的个人博客"
+  author = "Ken"
+  defaultTheme = "auto"  # auto / light / dark
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = true
+  tocopen = false
+  DateFormat = "2006-01-02"
+
+  [params.homeInfoParams]
+    Title = "Hey! 你好 👋"
+    Content = "欢迎来到我的博客，这里记录我的技术学习与思考。"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/Ken-Chy129"
+
+  # 搜索功能
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+  # 评论系统 (Giscus)
+  [params.comments]
+    enable = true
+
+  # 数据统计 - Google Analytics
+  # [params.analytics.google]
+  #   SiteVerificationTag = "你的验证标签"
+
+# 菜单
+[menu]
+  [[menu.main]]
+    identifier = "search"
+    name = "🔍 搜索"
+    url = "/search/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "archives"
+    name = "📚 归档"
+    url = "/archives/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "categories"
+    name = "📁 分类"
+    url = "/categories/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "🏷️ 标签"
+    url = "/tags/"
+    weight = 4
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    noClasses = false
+    style = "monokai"
+
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
