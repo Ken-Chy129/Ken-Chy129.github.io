@@ -1,10 +1,10 @@
 ---
 title: "JSON和Protobuf序列化"
-date: 2026-02-25T12:03:00+08:00
-draft: true
+date: 2023-10-30T22:49:18+08:00
+draft: false
 summary: "因为像TCP和UDP这种底层协议只能发送字节流，因此当我们在开发一些远程过程调用（RPC）的程序时，需要将应用层的Java POJO对象序列化成字节流，数据接收端再反序列化成Java POJO对象。序列化一定会设计编码和格式化，目前常见的编码方式有： 1. JSON：将Java POJO对象转换成J..."
 tags: []
-categories: []
+categories: [Tech]
 source: csdn
 source_id: "134130084"
 source_url: "https://blog.csdn.net/qq_25046827/article/details/134130084"

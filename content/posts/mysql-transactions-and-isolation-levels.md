@@ -1,10 +1,10 @@
 ---
 title: "MySQL事务详解与隔离级别的实现"
 date: 2023-03-10T15:16:03+08:00
-draft: true
+draft: false
 summary: "文章目录"
-tags: []
-categories: []
+tags: [MySQL, Transaction]
+categories: [Database]
 source: csdn
 source_id: "129443430"
 ---

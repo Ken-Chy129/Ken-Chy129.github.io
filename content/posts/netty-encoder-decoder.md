@@ -1,10 +1,10 @@
 ---
 title: "Netty编码器和解码器"
 date: 2023-10-28T18:47:24+08:00
-draft: true
+draft: false
 summary: "文章目录"
-tags: []
-categories: []
+tags: [Netty]
+categories: [Java, Networking]
 source: csdn
 source_id: "134094704"
 ---

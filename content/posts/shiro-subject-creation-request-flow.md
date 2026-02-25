@@ -1,10 +1,10 @@
 ---
 title: "Shiro源码剖析——Subject的创建与获取（一次完整的请求执行流程）"
-date: 2026-02-25T12:03:00+08:00
-draft: true
+date: 2022-05-02T14:14:37+08:00
+draft: false
 summary: "**本文可能较长，但是通读一定能让你对整个shiro请求的执行流程有清晰的了解** 总体流程： 1、在过滤的过程中创建subject doFilter -SecurityManager -SubjectContext -创建subject -解析各种信息并赋值 2、若该subject未认证则进行认证..."
-tags: []
-categories: []
+tags: [Shiro]
+categories: [Java, Security]
 source: csdn
 source_id: "124540457"
 source_url: "https://blog.csdn.net/qq_25046827/article/details/124540457"

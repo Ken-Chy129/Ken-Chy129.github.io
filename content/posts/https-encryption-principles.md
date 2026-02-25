@@ -1,10 +1,10 @@
 ---
 title: "HTTPS加密原理"
-date: 2026-02-25T12:03:00+08:00
-draft: true
+date: 2023-03-16T16:40:01+08:00
+draft: false
 summary: "一、加密基础 1、单向加密 也称为不可逆加密，对明文产生一个密文，并且不能通过密文解出对应的明文 使用场景：一般用于信息摘要，密钥加密等 常见的单向加密算法有： 1. MD5 2. SHA：SHA192，SHA256 特点： - 不可逆 - 输入一样，输出相同 2、对称加密 对称加密，用一个密钥，对..."
-tags: []
-categories: []
+tags: [HTTPS, TLS]
+categories: [Security]
 source: csdn
 source_id: "129591086"
 source_url: "https://blog.csdn.net/qq_25046827/article/details/129591086"

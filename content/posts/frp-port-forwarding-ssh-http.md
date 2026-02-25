@@ -1,10 +1,10 @@
 ---
 title: "使用frp端口映射实现内网穿透(SSH、HTTP服务)"
 date: 2022-07-18T18:52:58+08:00
-draft: true
+draft: false
 summary: "使用frp端口映射实现内网穿透(SSH、HTTP服务) 一、下载 通过的学习我们已经明白了内网穿透的原理，想要实现内网穿透就需要让内网实现与具有公网IP的设备进行绑定。 我们这里使用frp（一个专注于内网穿透的高性能的反向代理应用，支持 TCP、UDP、HTTP、HTTPS 等多种协议。可以将内网服务以安全、便捷的方式"
-tags: []
-categories: []
+tags: [FRP, NAT]
+categories: [Networking]
 source: csdn
 source_id: "125857308"
 ---

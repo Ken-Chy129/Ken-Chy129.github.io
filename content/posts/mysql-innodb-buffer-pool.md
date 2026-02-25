@@ -1,10 +1,10 @@
 ---
 title: "MySQL之深入InnoDB存储引擎——Buffer Pool"
-date: 2026-02-25T12:03:00+08:00
-draft: true
+date: 2023-08-06T21:55:44+08:00
+draft: false
 summary: "InnoDB存储引擎是基于磁盘存储的，并将其中的记录按照页的方式进行管理。在数据库系统中，由于CPU速度与磁盘速度之间的鸿沟，基于磁盘的数据库系统通常使用缓冲池技术来提高数据库的整体性能。在数据库中进行读取页的操作，首先将从磁盘读到的页存放在缓冲池中，这个过程称为将页“FIX”在缓冲池中，在下一次读..."
-tags: []
-categories: []
+tags: [MySQL, InnoDB, "Buffer Pool"]
+categories: [Database]
 source: csdn
 source_id: "132136245"
 source_url: "https://blog.csdn.net/qq_25046827/article/details/132136245"

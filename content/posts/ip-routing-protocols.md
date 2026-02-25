@@ -1,10 +1,10 @@
 ---
 title: "IP路由协议（RIP、IGRP、OSPF、IS-IS、BGP）"
-date: 2026-02-25T12:03:00+08:00
-draft: true
+date: 2023-07-02T16:57:06+08:00
+draft: false
 summary: "1、路由分类 路由产生方式： 1. 直接路由：路由器会**自动生成**本路由器激活端口所在网段的路由条目 2. 静态路由：网络管理员手工配置，静态路由信息在缺省的情况下私有的，**不会传递给其他的路由器** * * 简单、高效、可靠、安全保密性高 * **静态路由描述转发路径的方式有两种：指向本地接..."
 tags: []
-categories: []
+categories: [Tech]
 source: csdn
 source_id: "131502460"
 source_url: "https://blog.csdn.net/qq_25046827/article/details/131502460"

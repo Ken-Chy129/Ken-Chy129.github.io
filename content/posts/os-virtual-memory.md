@@ -1,10 +1,10 @@
 ---
 title: "操作系统——虚拟内存管理"
 date: 2023-07-16T21:54:47+08:00
-draft: true
+draft: false
 summary: "文章目录"
-tags: []
-categories: []
+tags: [Linux, "Virtual Memory"]
+categories: [OS]
 source: csdn
 source_id: "131755732"
 ---

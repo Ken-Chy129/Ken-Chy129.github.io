@@ -1,10 +1,10 @@
 ---
 title: "MySQL表空间结构与页、区、段的定义"
 date: 2023-08-06T12:24:52+08:00
-draft: true
+draft: false
 summary: "文章目录"
-tags: []
-categories: []
+tags: [MySQL]
+categories: [Database]
 source: csdn
 source_id: "132129608"
 ---

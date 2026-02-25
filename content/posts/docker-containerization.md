@@ -1,10 +1,10 @@
 ---
 title: "Docker容器化技术"
-date: 2026-02-25T12:03:00+08:00
-draft: true
+date: 2022-10-30T22:42:54+08:00
+draft: false
 summary: "一、虚拟机与容器的比较 在容器化技术出来之前，使用的是虚拟机技术，虚拟机和Docker容器技术都是一种虚拟化技术 虚拟机包含的是整个操作系统的原生镜像，非常的庞大，而docker的镜像只包含最核心的环境，非常小巧。 1、虚拟机技术 缺点： - 资源占用十分多 - 冗余步骤多 - 启动慢 2、容器化技..."
-tags: []
-categories: []
+tags: [Docker]
+categories: ["Cloud Native"]
 source: csdn
 source_id: "127606661"
 source_url: "https://blog.csdn.net/qq_25046827/article/details/127606661"

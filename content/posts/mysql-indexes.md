@@ -1,10 +1,10 @@
 ---
 title: "MySQL索引"
-date: 2026-02-25T12:03:00+08:00
-draft: true
+date: 2023-03-06T14:43:37+08:00
+draft: false
 summary: "1、简介 索引是帮助MySQL高效获取数据的排好序的数据结构。MySQL索引的建立对于MySQL的高效运行是很重要的，可以大大提高MySQL的检索速度。 **索引是在存储引擎中实现的**，因此，每种存储引擎的索引都不一定完全相同，并且每种存储引擎也不一定支持所有索引类型。**MySQL中索引的存储类..."
-tags: []
-categories: []
+tags: [MySQL, Index]
+categories: [Database]
 source: csdn
 source_id: "129362161"
 source_url: "https://blog.csdn.net/qq_25046827/article/details/129362161"

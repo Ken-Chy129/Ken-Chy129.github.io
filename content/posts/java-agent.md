@@ -1,10 +1,10 @@
 ---
 title: "Java Agent 技术"
 date: 2025-05-15T01:30:34+08:00
-draft: true
+draft: false
 summary: "一、简介 Java Agent 是一种 JVM 插桩机制，它允许在 主程序 main 方法执行之前 或者在 JVM 运行时 进行字节码的 修改和增强 。我们经常使用的各种线上诊断工具如 btrace 和 arthas、代码调试、热部署等功能，都是基于 Java Agent 实现的。 Java Agent 可以理解为是一"
 tags: []
-categories: []
+categories: [Tech]
 source: csdn
 source_id: "147966453"
 ---

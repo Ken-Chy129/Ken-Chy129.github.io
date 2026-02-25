@@ -1,10 +1,10 @@
 ---
 title: "Reactor反应器模式"
 date: 2023-10-24T22:12:37+08:00
-draft: true
+draft: false
 summary: "文章目录"
 tags: []
-categories: []
+categories: [Tech]
 source: csdn
 source_id: "134023107"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "MySQL之深入InnoDB存储引擎——redo日志"
 date: 2023-08-08T11:24:56+08:00
-draft: true
+draft: false
 summary: "从持久性出发，解释 redo log 的必要性、类型、MTR、写入流程、checkpoint 与崩溃恢复。"
 tags: ["MySQL", "InnoDB", "redo log"]
 categories: ["数据库"]

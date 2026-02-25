@@ -1,10 +1,10 @@
 ---
 title: "MySQL之深入InnoDB存储引擎——Checkpoint机制"
 date: 2023-07-27T14:39:39+08:00
-draft: true
+draft: false
 summary: "文章目录"
-tags: []
-categories: []
+tags: [MySQL, InnoDB, checkpoint]
+categories: [Database]
 source: csdn
 source_id: "131959644"
 ---

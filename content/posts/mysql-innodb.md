@@ -1,10 +1,10 @@
 ---
 title: "MySQL之深入InnoDB存储引擎——物理文件"
 date: 2023-07-29T00:23:36+08:00
-draft: true
+draft: false
 summary: "文章目录"
-tags: []
-categories: []
+tags: [MySQL, InnoDB]
+categories: [Database]
 source: csdn
 source_id: "131989826"
 ---

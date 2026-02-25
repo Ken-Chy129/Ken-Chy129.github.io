@@ -1,10 +1,10 @@
 ---
 title: "Java安全点safepoint"
 date: 2025-06-08T17:43:14+08:00
-draft: true
+draft: false
 summary: "安全点是指程序的某些特定的位置，当线程执行到这些位置的时候，说明虚拟机当前的状态是安全的，如果有需要，可以在这个位置暂停。 当程序执行某些特定的操作时需要避免其他线程的操作导致程序的状态不一致或不确定，因此此时会让应用程序产生停顿，这个停顿称为STW（Stop The World）。HotSpotVM使用安全点来实现S"
 tags: []
-categories: []
+categories: [Tech]
 source: csdn
 source_id: "148515810"
 ---

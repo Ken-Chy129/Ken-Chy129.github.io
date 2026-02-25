@@ -1,10 +1,10 @@
 ---
 title: "Java序列化与反序列化"
 date: 2022-07-15T18:21:26+08:00
-draft: true
+draft: false
 summary: "序列化：将 Java 对象转换成字节流的过程。 反序列化：将字节流转换成 Java 对象的过程。 当 Java 对象需要在网络上传输 或者 持久化存储到文件中时，就需要对 Java 对象进行序列化处理。 一、定义 Java对象序列化是 将实现了Serializable接口的对象转换成一个字节序列 ，能够 通过网络传输、"
 tags: []
-categories: []
+categories: [Tech]
 source: csdn
 source_id: "125810336"
 ---

@@ -1,10 +1,10 @@
 ---
 title: "MySQL锁的分类和加锁机制"
-date: 2026-02-25T12:03:00+08:00
-draft: true
+date: 2023-03-12T18:50:55+08:00
+draft: false
 summary: "在了解MySQL锁之前，首先我们必须要明白加锁的是为了解决什么问题。 我们知道事务具有个隔离性的特性，而隔离性的实现主要就是通过锁以及MVCC机制实现的（关于MVCC机制以及隔离级别的实现可查看文章：）。 MVCC是一种用来解决读写冲突的无锁并发控制，在并发读写数据库时，可以做到在读操作时不用阻塞写..."
-tags: []
-categories: []
+tags: [MySQL, Lock]
+categories: [Database]
 source: csdn
 source_id: "129479298"
 source_url: "https://blog.csdn.net/qq_25046827/article/details/129479298"

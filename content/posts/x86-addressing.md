@@ -1,10 +1,10 @@
 ---
 title: "x86的内存寻址方式"
 date: 2023-08-27T01:46:47+08:00
-draft: true
+draft: false
 summary: "文章目录"
 tags: []
-categories: []
+categories: [Tech]
 source: csdn
 source_id: "132518061"
 ---

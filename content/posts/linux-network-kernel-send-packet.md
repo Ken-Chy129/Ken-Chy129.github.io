@@ -1,10 +1,10 @@
 ---
 title: "深入理解Linux网络——内核是如何发送网络包的"
 date: 2023-07-12T01:41:34+08:00
-draft: true
+draft: false
 summary: "文章目录"
-tags: []
-categories: []
+tags: [Linux]
+categories: [Networking]
 source: csdn
 source_id: "131672373"
 ---

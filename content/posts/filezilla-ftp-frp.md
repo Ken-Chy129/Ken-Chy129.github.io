@@ -1,10 +1,10 @@
 ---
 title: "使用FileZilla搭建公网访问的ftp服务器(Frp/花生壳)"
 date: 2022-07-23T16:08:09+08:00
-draft: true
+draft: false
 summary: "文章目录"
-tags: []
-categories: []
+tags: [FRP, NAT]
+categories: [Networking]
 source: csdn
 source_id: "125948960"
 ---

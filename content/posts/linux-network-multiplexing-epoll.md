@@ -1,10 +1,10 @@
 ---
 title: "深入理解Linux网络——内核与用户进程协作之多路复用方案（epoll）"
 date: 2023-07-10T01:30:54+08:00
-draft: true
+draft: false
 summary: "文章目录"
-tags: []
-categories: []
+tags: [Linux, epoll]
+categories: [Networking]
 source: csdn
 source_id: "131630312"
 ---

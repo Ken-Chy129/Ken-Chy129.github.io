@@ -1,10 +1,10 @@
 ---
 title: "深入理解Linux网络——本机网络IO"
-date: 2026-02-25T12:03:00+08:00
-draft: true
+date: 2023-07-12T18:20:33+08:00
+draft: false
 summary: "系列文章： 1. 2. 3. 4. 5. 6. 7. 前面的章节深度分析了网络包的接收，也拆分了网络包的发送，总之收发流程算是闭环了。不过还有一种特殊的情况没有讨论，那就是接收和发送都在本机进行。而且实践中这种本机网络IO出现的场景还不少，而且还有越来越多的趋势。例如LNMP技术栈中的nginx和p..."
-tags: []
-categories: []
+tags: [Linux]
+categories: [Networking]
 source: csdn
 source_id: "131687835"
 source_url: "https://blog.csdn.net/qq_25046827/article/details/131687835"

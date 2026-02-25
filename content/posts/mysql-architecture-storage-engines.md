@@ -1,10 +1,10 @@
 ---
 title: "MySQL基本组件与存储引擎"
-date: 2026-02-25T12:03:00+08:00
-draft: true
+date: 2023-03-14T01:01:18+08:00
+draft: false
 summary: "一、MySQL基础架构 简单来说 MySQL 主要分为 Server 层和存储引擎层： - **Server 层**：主要包括连接器、查询缓存、分析器、优化器、执行器等，所有跨存储引擎的功能都在这一层实现，比如存储过程、触发器、视图，函数等，还有一个通用的日志模块 binlog 日志模块。 - **..."
-tags: []
-categories: []
+tags: [MySQL]
+categories: [Database]
 source: csdn
 source_id: "129512751"
 source_url: "https://blog.csdn.net/qq_25046827/article/details/129512751"

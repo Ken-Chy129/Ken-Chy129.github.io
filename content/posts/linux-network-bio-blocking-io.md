@@ -1,10 +1,10 @@
 ---
 title: "深入理解Linux网络——内核与用户进程协作之同步阻塞方案（BIO）"
-date: 2026-02-25T12:03:00+08:00
-draft: true
+date: 2023-07-09T18:24:56+08:00
+draft: false
 summary: "系列文章： 1. 2. 3. 4. 5. 6. 7. 在上一部分中讲述了网络包是如何从网卡送到协议栈的（详见），接下来内核还有一项重要的工作，就是在协议栈接收处理完输入包后要通知到用户进程，如何用户进程接收到并处理这些数据。 进程与内核配合有多种方案，这里我们这分析两种典型的： 1. 同步阻塞方案（..."
-tags: []
-categories: []
+tags: [Linux, BIO]
+categories: [Networking]
 source: csdn
 source_id: "131625686"
 source_url: "https://blog.csdn.net/qq_25046827/article/details/131625686"

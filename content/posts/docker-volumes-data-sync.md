@@ -1,10 +1,10 @@
 ---
 title: "Docker容器数据卷技术（实现数据同步）"
-date: 2026-02-25T12:03:00+08:00
-draft: true
+date: 2022-11-01T17:47:18+08:00
+draft: false
 summary: "一、什么是数据卷 数据卷是一个可供容器使用的特殊目录，它将主机操作系统目录直接映射进容器，类似于Linux中的mount操作。 数据卷可以提供很多有用的特性，如下所示： 1. 数据卷可以在容器之间共享和重用，容器间传递数据将变得高效方便； 2. 对数据卷内数据的修改会立马生效，无论是容器内操作还是本..."
-tags: []
-categories: []
+tags: [Docker]
+categories: ["Cloud Native"]
 source: csdn
 source_id: "127638133"
 source_url: "https://blog.csdn.net/qq_25046827/article/details/127638133"

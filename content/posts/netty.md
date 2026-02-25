@@ -1,10 +1,10 @@
 ---
 title: "Netty基础入门和基本使用"
 date: 2023-10-25T01:28:13+08:00
-draft: true
+draft: false
 summary: "文章目录"
-tags: []
-categories: []
+tags: [Netty]
+categories: [Java, Networking]
 source: csdn
 source_id: "134025561"
 ---

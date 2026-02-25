@@ -1,10 +1,10 @@
 ---
 title: "CPU架构和指令集"
 date: 2023-08-26T21:53:41+08:00
-draft: true
+draft: false
 summary: "文章目录"
 tags: []
-categories: []
+categories: [Tech]
 source: "https://blog.csdn.net/qq_25046827/article/details/132516463"
 source_id: "132516463"
 ---

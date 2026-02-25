@@ -1,10 +1,10 @@
 ---
 title: "Netty底层原理"
 date: 2023-11-12T22:16:09+08:00
-draft: true
+draft: false
 summary: "NIO有一个非常重要的组件——多路复用器，其底层有3种经典模型，分别是epoll、select和poll。与传统IO相比，一个多路复用器可以处理多个Socket连接，而传统IO对每个连接都需要一条线程去同步阻塞处理。NIO有了多路复用器后只需要一条线程即可管理多个Socket连接的接入和读写事件。 Netty的多路复用"
-tags: []
-categories: []
+tags: [Netty]
+categories: [Java, Networking]
 source: csdn
 source_id: "134367044"
 ---

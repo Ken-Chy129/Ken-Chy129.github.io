@@ -1,10 +1,10 @@
 ---
 title: "系统调用与用户态陷入内核态"
 date: 2023-04-24T22:13:27+08:00
-draft: true
+draft: false
 summary: "文章目录"
-tags: []
-categories: []
+tags: [Linux, syscall]
+categories: [OS]
 source: csdn
 source_id: "130353420"
 ---

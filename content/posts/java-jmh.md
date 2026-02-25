@@ -1,10 +1,10 @@
 ---
 title: "Java微基准测试工具JMH"
 date: 2025-05-18T18:24:40+08:00
-draft: true
+draft: false
 summary: "Java微基准测试工具JMH（Java MicroBenchmark Harness）负责JVM预热和代码优化路径等工作，使基准测试尽可能简单。 JVM的即时编译器会对代码进行优化，这可能会影响性能测试的结果。JMH通过控制测试环境（预热、多轮迭代、多进程测试等机制），确保测试结果的准确性。 一、快速开始 Maven依"
 tags: []
-categories: []
+categories: [Tech]
 source: csdn
 source_id: "148047712"
 ---

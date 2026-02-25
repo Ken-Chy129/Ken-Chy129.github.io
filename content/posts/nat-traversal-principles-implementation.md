@@ -1,10 +1,10 @@
 ---
 title: "内网穿透的原理和实现方式"
-date: 2026-02-25T12:03:00+08:00
-draft: true
+date: 2022-07-08T20:24:58+08:00
+draft: false
 summary: "一、定义 内网穿透也成NAT穿透，进行NAT穿透是为了**使具有某一个特定源IP地址和源端口号的数据包不被NAT设备屏蔽而正确路由到内网主机**。 NAT（网络地址转换）设备自动屏蔽了非内网主机主动发起的连接，也就是说从外网发往内网的数据包将被NAT设备丢弃掉。这使得位于不同NAT设备之后的主机无法..."
-tags: []
-categories: []
+tags: [FRP, NAT]
+categories: [Networking]
 source: csdn
 source_id: "125685406"
 source_url: "https://blog.csdn.net/qq_25046827/article/details/125685406"

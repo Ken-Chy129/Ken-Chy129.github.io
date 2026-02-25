@@ -1,10 +1,10 @@
 ---
 title: "MySQL之深入InnoDB存储引擎——Undo页"
 date: 2023-08-09T21:09:49+08:00
-draft: true
+draft: false
 summary: "文章目录"
-tags: []
-categories: []
+tags: [MySQL, InnoDB, "undo log"]
+categories: [Database]
 source: csdn
 source_id: "132197432"
 ---

@@ -1,10 +1,10 @@
 ---
 title: "深入理解Linux网络——TCP连接建立过程（三次握手源码详解）"
-date: 2026-02-25T12:03:00+08:00
-draft: true
+date: 2023-07-15T21:03:27+08:00
+draft: false
 summary: "系列文章： 1. 2. 3. 4. 5. 6. 7. 一、相关实际问题 1. 为什么服务端程序都需要先listen一下 2. 半连接队列和全连接队列长度如何确定 3. “Cannot assign requested address”这个报错是怎么回事 4. 一个客户端端口可以同时用在两条连接上吗 ..."
-tags: []
-categories: []
+tags: [Linux, TCP, Handshake]
+categories: [Networking]
 source: csdn
 source_id: "131744066"
 source_url: "https://blog.csdn.net/qq_25046827/article/details/131744066"

@@ -1,10 +1,10 @@
 ---
 title: "路由协议基本术语"
 date: 2023-07-01T20:14:26+08:00
-draft: true
+draft: false
 summary: "文章目录"
 tags: []
-categories: []
+categories: [Tech]
 source: csdn
 source_id: "131494222"
 ---

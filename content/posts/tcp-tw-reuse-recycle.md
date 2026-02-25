@@ -1,10 +1,10 @@
 ---
 title: "深入TCP协议——tcp_tw_reuse和tcp_tw_recycle"
 date: 2023-07-20T20:24:38+08:00
-draft: true
+draft: false
 summary: "前情提要： 我们已经知道TCP四次挥手中，主动方在收到被动方的FIN数据包之后会进入TIME_WAIT状态等待2MSL的时间后才进入CLOSED。在 Linux 操作系统下，TIME_WAIT 状态的持续时间是 60 秒，这意味着这 60 秒内，客户端一直会占用着这个端口，这是有一定的开销的。如果如果主动关闭连接方的 "
-tags: []
-categories: []
+tags: [Linux, TCP]
+categories: [Networking]
 source: csdn
 source_id: "131839126"
 ---

@@ -1,10 +1,10 @@
 ---
 title: "MySQL查询执行计划详解（EXPLAIN）"
 date: 2023-08-06T18:18:41+08:00
-draft: true
+draft: false
 summary: "文章目录"
-tags: []
-categories: []
+tags: [MySQL, EXPLAIN]
+categories: [Database]
 source: csdn
 source_id: "132133779"
 ---

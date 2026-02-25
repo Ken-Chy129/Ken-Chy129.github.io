@@ -1,10 +1,10 @@
 ---
 title: "网络互联设备（集线器、交换机、路由器）"
 date: 2023-07-05T13:44:30+08:00
-draft: true
+draft: false
 summary: "文章目录"
-tags: []
-categories: []
+tags: [Linux]
+categories: [Networking]
 source: csdn
 source_id: "131553797"
 ---

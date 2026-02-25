@@ -1,10 +1,10 @@
 ---
 title: "深入理解Linux网络——TCP协议三次握手和四次挥手详细流程"
 date: 2023-07-20T17:49:40+08:00
-draft: true
+draft: false
 summary: "文章目录"
-tags: []
-categories: []
+tags: [Linux, TCP, Handshake]
+categories: [Networking]
 source: csdn
 source_id: "131836333"
 ---

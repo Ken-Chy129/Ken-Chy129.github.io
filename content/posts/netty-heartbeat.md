@@ -1,10 +1,10 @@
 ---
 title: "Netty心跳检测"
-date: 2026-02-25T12:03:00+08:00
-draft: true
+date: 2023-11-08T00:26:33+08:00
+draft: false
 summary: "客户端的心跳检测对于任何长连接的应用来说，都是一个非常基础的功能。要理解心跳的重要性，首先需要从网络连接假死的现象说起。 一、网络连接假死现象 什么是连接假死呢？如果底层的TCP连接已经断开，但是服务器端并没有正常地关闭套接字，认为这条连接仍然是存在的。 连接假死的具体表现如下： 1. 在服务器端，..."
-tags: []
-categories: []
+tags: [Netty]
+categories: [Java, Networking]
 source: csdn
 source_id: "134279275"
 source_url: "https://blog.csdn.net/qq_25046827/article/details/134279275"

@@ -1,10 +1,10 @@
 ---
 title: "深入理解Linux网络——内核是如何接收到网络包的"
 date: 2023-07-08T00:08:57+08:00
-draft: true
+draft: false
 summary: "文章目录"
-tags: []
-categories: []
+tags: [Linux]
+categories: [Networking]
 source: csdn
 source_id: "131606283"
 ---

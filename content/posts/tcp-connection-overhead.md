@@ -1,10 +1,10 @@
 ---
 title: "深入理解Linux网络——TCP连接的开销"
 date: 2023-07-18T19:52:22+08:00
-draft: true
+draft: false
 summary: "文章目录"
-tags: []
-categories: []
+tags: [Linux, TCP]
+categories: [Networking]
 source: csdn
 source_id: "131794862"
 ---
