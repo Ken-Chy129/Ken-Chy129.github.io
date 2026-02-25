@@ -46,6 +46,11 @@ buildExpired = false
     name = "github"
     url = "https://github.com/Ken-Chy129"
 
+  [[params.socialIcons]]
+    name = "csdn"
+    title = "CSDN"
+    url = "https://blog.csdn.net/qq_25046827"
+
   # 搜索功能
   [params.fuseOpts]
     isCaseSensitive = false
