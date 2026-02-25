@@ -2,7 +2,7 @@
 title: "x86的内存寻址方式"
 date: 2023-08-27T01:46:47+08:00
 draft: false
-summary: "文章目录"
+summary: "介绍 x86 架构的内存寻址方式，从实模式（8086 段:偏移寻址 1MB 地址空间）到保护模式（IA-32）的演进，详解段选择子、段寄存器、虚拟地址寻址，以及保护模式如何提供进程隔离与安全保护。"
 tags: []
 categories: [Tech]
 source: csdn

@@ -2,7 +2,7 @@
 title: "MySQL之深入InnoDB存储引擎——物理文件"
 date: 2023-07-29T00:23:36+08:00
 draft: false
-summary: "文章目录"
+summary: "深入介绍 InnoDB 存储引擎的物理文件结构，涵盖 MySQL 配置参数（动态参数与静态参数）、错误日志、慢查询日志、通用查询日志、二进制日志等各类日志文件的作用与配置。"
 tags: [MySQL, InnoDB]
 categories: [Database]
 source: csdn

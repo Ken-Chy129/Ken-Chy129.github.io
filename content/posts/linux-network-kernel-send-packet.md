@@ -2,7 +2,7 @@
 title: "深入理解Linux网络——内核是如何发送网络包的"
 date: 2023-07-12T01:41:34+08:00
 draft: false
-summary: "文章目录"
+summary: "深入分析 Linux 内核发送网络包的完整流程，涵盖系统调用、内存拷贝、协议栈处理、网卡驱动 RingBuffer、实际发送与中断通知等环节，同时介绍零拷贝技术以及 Kafka 高性能网络的原理。"
 tags: [Linux]
 categories: [Networking]
 source: csdn

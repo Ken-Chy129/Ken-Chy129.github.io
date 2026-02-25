@@ -2,7 +2,7 @@
 title: "Netty基础入门和基本使用"
 date: 2023-10-25T01:28:13+08:00
 draft: false
-summary: "文章目录"
+summary: "Netty 框架的基础入门，介绍 Netty 的异步回调模型，包括对 Java Future 接口的扩展、GenericFutureListener 非阻塞回调机制，以及 Netty 自有 Future 接口的增强方法。"
 tags: [Netty]
 categories: [Java, Networking]
 source: csdn

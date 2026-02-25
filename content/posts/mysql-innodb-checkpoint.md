@@ -2,7 +2,7 @@
 title: "MySQL之深入InnoDB存储引擎——Checkpoint机制"
 date: 2023-07-27T14:39:39+08:00
 draft: false
-summary: "文章目录"
+summary: "深入介绍 InnoDB 的 Checkpoint 机制，包括脏页刷盘、Redo Log 空间回收与崩溃恢复加速的需求，Write Ahead Log（WAL）策略、LSN 日志序列号的作用，以及 Checkpoint 触发脏页刷新的流程。"
 tags: [MySQL, InnoDB, checkpoint]
 categories: [Database]
 source: csdn

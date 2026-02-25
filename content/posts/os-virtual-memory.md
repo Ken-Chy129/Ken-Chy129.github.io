@@ -2,7 +2,7 @@
 title: "操作系统——虚拟内存管理"
 date: 2023-07-16T21:54:47+08:00
 draft: false
-summary: "文章目录"
+summary: "介绍操作系统虚拟内存管理机制，包括为什么需要虚拟内存（地址空间隔离、内存使用效率、地址确定性），逻辑地址、线性地址与物理地址的区别，以及 x86 架构下的分段和分页地址转换过程。"
 tags: [Linux, "Virtual Memory"]
 categories: [OS]
 source: csdn

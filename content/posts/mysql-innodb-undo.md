@@ -2,7 +2,7 @@
 title: "MySQL之深入InnoDB存储引擎——Undo页"
 date: 2023-08-09T21:09:49+08:00
 draft: false
-summary: "文章目录"
+summary: "深入介绍 InnoDB Undo 日志的原理与实现，涵盖 INSERT/DELETE/UPDATE 操作的 Undo 日志格式、trx_id 和 roll_pointer 隐藏列的作用、delete mark 与 purge 两阶段删除，以及版本链的构建机制。"
 tags: [MySQL, InnoDB, "undo log"]
 categories: [Database]
 source: csdn

@@ -2,7 +2,7 @@
 title: "使用FileZilla搭建公网访问的ftp服务器(Frp/花生壳)"
 date: 2022-07-23T16:08:09+08:00
 draft: false
-summary: "文章目录"
+summary: "介绍如何使用 FileZilla 搭建可公网访问的 FTP 服务器，通过 Frp 或花生壳实现 NAT 穿透，详解 FTP 主动模式与被动模式的数据连接建立方式及 NAT 环境下的注意事项。"
 tags: [FRP, NAT]
 categories: [Networking]
 source: csdn

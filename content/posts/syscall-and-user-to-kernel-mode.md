@@ -2,7 +2,7 @@
 title: "系统调用与用户态陷入内核态"
 date: 2023-04-24T22:13:27+08:00
 draft: false
-summary: "文章目录"
+summary: "介绍系统调用与用户态陷入内核态的机制，包括用户态/内核态分离的原因、x86 CPU 特权级别（PL0/PL3）、进入内核态的三种方式（系统调用、异常、中断），以及系统调用的执行流程。"
 tags: [Linux, syscall]
 categories: [OS]
 source: csdn

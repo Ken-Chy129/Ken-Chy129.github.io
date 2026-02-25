@@ -2,7 +2,7 @@
 title: "MySQL事务详解与隔离级别的实现"
 date: 2023-03-10T15:16:03+08:00
 draft: false
-summary: "文章目录"
+summary: "详解 MySQL 事务的 ACID 特性，分析并发场景下的脏读、不可重复读、幻读问题，以及四种 SQL 隔离级别（读未提交、读已提交、可重复读、串行化）的实现原理。"
 tags: [MySQL, Transaction]
 categories: [Database]
 source: csdn

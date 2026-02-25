@@ -2,7 +2,7 @@
 title: "深入理解Linux网络——内核是如何接收到网络包的"
 date: 2023-07-08T00:08:57+08:00
 draft: false
-summary: "文章目录"
+summary: "深入分析 Linux 内核接收网络包的完整流程，从网卡 RingBuffer、硬中断/软中断、ksoftirqd 内核线程到协议栈处理，涵盖多队列网卡、tcpdump 抓包原理、iptables/netfilter 以及 DPDK 高性能方案。"
 tags: [Linux]
 categories: [Networking]
 source: csdn

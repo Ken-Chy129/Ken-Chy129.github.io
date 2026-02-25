@@ -2,7 +2,7 @@
 title: "Netty编码器和解码器"
 date: 2023-10-28T18:47:24+08:00
 draft: false
-summary: "文章目录"
+summary: "介绍 Netty 编解码器的原理与使用，包括入站方向将 ByteBuf 解码为 Java POJO 对象、出站方向将 POJO 编码为 ByteBuf 的流程，以及 ByteToMessageDecoder 基类的工作机制和自定义解码器的实现。"
 tags: [Netty]
 categories: [Java, Networking]
 source: csdn

@@ -2,7 +2,7 @@
 title: "MySQL表空间结构与页、区、段的定义"
 date: 2023-08-06T12:24:52+08:00
 draft: false
-summary: "文章目录"
+summary: "详解 MySQL InnoDB 表空间的存储层级结构，包括页（Page）的基本单位与类型、区（Extent）的连续分配与顺序 IO 优化、段（Segment）的逻辑分组，以及碎片区的空间优化策略。"
 tags: [MySQL]
 categories: [Database]
 source: csdn

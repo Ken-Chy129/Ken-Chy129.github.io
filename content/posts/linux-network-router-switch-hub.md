@@ -2,7 +2,7 @@
 title: "网络互联设备（集线器、交换机、路由器）"
 date: 2023-07-05T13:44:30+08:00
 draft: false
-summary: "文章目录"
+summary: "介绍网络互联设备——中继器、集线器、网桥、交换机、路由器和网关，解析它们在 OSI 各层的工作原理、物理互联与协议互联的区别，以及冲突域和广播域的概念。"
 tags: [Linux]
 categories: [Networking]
 source: csdn

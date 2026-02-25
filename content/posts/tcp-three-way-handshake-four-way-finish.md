@@ -2,7 +2,7 @@
 title: "深入理解Linux网络——TCP协议三次握手和四次挥手详细流程"
 date: 2023-07-20T17:49:40+08:00
 draft: false
-summary: "文章目录"
+summary: "从 Linux 内核源码层面详解 TCP 三次握手与四次挥手的完整流程，包括 connect 系统调用、Socket 状态转换、端口绑定、SYN 包构造、重传定时器、半连接队列与全连接队列的处理。"
 tags: [Linux, TCP, Handshake]
 categories: [Networking]
 source: csdn

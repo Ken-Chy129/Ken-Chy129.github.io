@@ -2,7 +2,7 @@
 title: "Reactor反应器模式"
 date: 2023-10-24T22:12:37+08:00
 draft: false
-summary: "文章目录"
+summary: "介绍 Reactor 反应器模式的演进过程，从阻塞 OIO 到 Connection Per Thread 再到 Reactor 模型，详解 Reactor 线程和 Handler 的职责分工，并基于 Java NIO 给出单线程 Reactor 的实现示例。"
 tags: []
 categories: [Tech]
 source: csdn

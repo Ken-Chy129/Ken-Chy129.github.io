@@ -2,7 +2,7 @@
 title: "深入理解Linux网络——TCP连接的开销"
 date: 2023-07-18T19:52:22+08:00
 draft: false
-summary: "文章目录"
+summary: "深入分析 Linux 内核中 TCP 连接的内存开销，包括 SLAB/SLUB 内存管理机制、ESTABLISHED 和 TIME_WAIT 状态连接的内存消耗，以及 UMA 与 NUMA 内存架构的演进。"
 tags: [Linux, TCP]
 categories: [Networking]
 source: csdn

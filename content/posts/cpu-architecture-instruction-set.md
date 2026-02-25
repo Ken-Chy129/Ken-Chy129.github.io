@@ -2,7 +2,7 @@
 title: "CPU架构和指令集"
 date: 2023-08-26T21:53:41+08:00
 draft: false
-summary: "文章目录"
+summary: "梳理 CPU 架构与指令集的基本概念，涵盖 x86（i386、AMD64、x86-64）、ARM、MIPS 等主流架构，厘清 x86 与 x64、IA-32 与 IA-64 的命名关系，介绍 SSE、AVX 等指令集扩展，以及 CISC 与 RISC 的设计差异。"
 tags: []
 categories: [Tech]
 source: "https://blog.csdn.net/qq_25046827/article/details/132516463"

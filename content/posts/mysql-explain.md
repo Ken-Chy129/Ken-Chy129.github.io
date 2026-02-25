@@ -2,7 +2,7 @@
 title: "MySQL查询执行计划详解（EXPLAIN）"
 date: 2023-08-06T18:18:41+08:00
 draft: false
-summary: "文章目录"
+summary: "详解 MySQL EXPLAIN 查询执行计划，涵盖单表访问类型（const、ref、range、index、all 等）、MRR 优化、索引合并策略（intersection、union、sort-union），以及多表连接查询中内连接与外连接的区别。"
 tags: [MySQL, EXPLAIN]
 categories: [Database]
 source: csdn

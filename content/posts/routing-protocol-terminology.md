@@ -2,7 +2,7 @@
 title: "路由协议基本术语"
 date: 2023-07-01T20:14:26+08:00
 draft: false
-summary: "文章目录"
+summary: "介绍路由协议的基本术语，包括自治系统（AS）的定义，外部网关协议（EGP/BGP）与内部网关协议（IGP/OSPF/RIP）的区别，以及跳数、带宽、延迟、负载、可靠性、MTU 等路由度量指标。"
 tags: []
 categories: [Tech]
 source: csdn

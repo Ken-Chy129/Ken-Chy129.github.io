@@ -2,7 +2,7 @@
 title: "深入理解Linux网络——内核与用户进程协作之多路复用方案（epoll）"
 date: 2023-07-10T01:30:54+08:00
 draft: false
-summary: "文章目录"
+summary: "从内核层面深入分析 Linux epoll IO 多路复用机制，介绍 epoll 相比阻塞 IO 和轮询的优势，详解 epoll_create、epoll_ctl、epoll_wait 三个核心系统调用及 eventpoll 内核对象的工作原理。"
 tags: [Linux, epoll]
 categories: [Networking]
 source: csdn

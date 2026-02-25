@@ -2,7 +2,7 @@
 title: "Java NIO三大核心组件"
 date: 2023-10-13T01:55:43+08:00
 draft: false
-summary: "文章目录"
+summary: "介绍 Java NIO 的三大核心组件：Channel（通道）、Buffer（缓冲区）和 Selector（选择器），对比 NIO 与传统 OIO 在面向流/面向缓冲、阻塞/非阻塞以及 IO 多路复用方面的差异。"
 tags: [Java, NIO]
 categories: [Java]
 source: csdn
