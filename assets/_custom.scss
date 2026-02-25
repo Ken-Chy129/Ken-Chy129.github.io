@@ -1,4 +1,4 @@
-// Custom overrides for hugo-book (stabilized)
+// Custom overrides for hugo-book (stable)
 
 :root { --topbar-height: 56px; }
 
@@ -117,6 +117,17 @@
 /* ===== Layout spacing for fixed elements ===== */
 body { padding-top: var(--topbar-height); }
 
+/* Hide Hugo Book's built-in mobile header (we have our own topbar)
+   - Still allow it on small screens EXCEPT the landing page (Home).
+*/
+.book-header { display: none; }
+@media (max-width: 56rem) {
+  .book-header { display: block; }
+}
+
+/* Home landing: never show the built-in header bar (avoids the extra "≡ Home" stripe). */
+body.book-layout-landing .book-header { display: none !important; }
+
 .book-menu .book-menu-content {
   top: var(--topbar-height) !important;
   height: calc(100vh - var(--topbar-height)) !important;
@@ -131,8 +142,8 @@ body { padding-top: var(--topbar-height); }
 .home-profile { padding: 3.5rem 1rem 3rem; }
 .home-profile-inner { max-width: 720px; margin: 0 auto; text-align: center; }
 .home-avatar {
-  width: 180px;
-  height: 180px;
+  width: 220px;
+  height: 220px;
   border-radius: 999px;
   object-fit: cover;
   background: rgba(127,127,127,.12);
