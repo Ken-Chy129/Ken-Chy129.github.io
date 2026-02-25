@@ -1,109 +1,71 @@
 baseURL = "https://ken-chy129.github.io/"
 languageCode = "zh-cn"
 defaultContentLanguage = "zh"
-title = "Ken's Blog"
-theme = "PaperMod"
-[pagination]
-  pagerSize = 10
+title = "Ken"
+theme = "hugo-book"
 
-enableRobotsTXT = true
-buildDrafts = false
-buildFuture = false
-buildExpired = false
+disablePathToLower = true
+enableGitInfo = true
 
-[minify]
-  disableXML = true
-
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 1
+  [markup.highlight]
+    style = "base16-snazzy"
 
 [params]
-  env = "production"
-  description = "Ken 的个人博客"
-  author = "Ken"
-  defaultTheme = "auto"  # auto / light / dark
-  ShowReadingTime = true
-  ShowShareButtons = false
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowWordCount = true
-  ShowRssButtonInSectionTermList = true
-  UseHugoToc = true
-  disableSpecial1stPost = false
-  disableScrollToTop = false
-  hidemeta = false
-  hideSummary = false
-  showtoc = true
-  tocopen = false
-  DateFormat = "2006-01-02"
+  BookTheme = "auto"          # light | dark | auto
+  BookSection = "*"           # render all sections in menu
+  BookSearch = true
+  BookComments = false
+  BookPortableLinks = false
 
-  [params.homeInfoParams]
-    Title = "Hey! 你好 👋"
-    Content = "欢迎来到我的博客，这里记录我的技术学习与思考。"
+  # Home profile (custom landing)
+  HomeTitle = "得过且过的勇者y"
+  HomeSubtitle = "What I cannot create, I do not understand."
+  HomeSubtitle2 = "AI / Java / 工程化落地笔记"
+  HomeAvatar = "/images/avatar.png"  # replace later
 
-  [[params.socialIcons]]
-    name = "github"
+  [[params.HomeSocial]]
+    name = "GitHub"
     url = "https://github.com/Ken-Chy129"
+    icon = "github"
 
-  [[params.socialIcons]]
-    name = "csdn"
-    title = "CSDN"
+  [[params.HomeSocial]]
+    name = "CSDN"
     url = "https://blog.csdn.net/qq_25046827"
+    icon = "csdn"
 
-  # 搜索功能
-  [params.fuseOpts]
-    isCaseSensitive = false
-    shouldSort = true
-    location = 0
-    distance = 1000
-    threshold = 0.4
-    minMatchCharLength = 0
-    keys = ["title", "permalink", "summary", "content"]
+  [[params.HomeSocial]]
+    name = "Email"
+    url = "mailto:ken-chy129@qq.com"
+    icon = "email"
 
-  # 评论系统 (Giscus)
-  [params.comments]
-    enable = true
-
-  # 数据统计 - Google Analytics
-  # [params.analytics.google]
-  #   SiteVerificationTag = "你的验证标签"
-
-# 菜单
+# 顶部导航（自定义 header 渲染）
 [menu]
   [[menu.main]]
-    identifier = "search"
-    name = "搜索"
-    url = "/search/"
+    name = "AI"
+    url = "/ai/"
     weight = 1
 
   [[menu.main]]
-    identifier = "archives"
-    name = "归档"
-    url = "/archives/"
+    name = "Java"
+    url = "/java/"
     weight = 2
 
   [[menu.main]]
-    identifier = "categories"
-    name = "分类"
-    url = "/categories/"
+    name = "News"
+    url = "/news/"
     weight = 3
 
   [[menu.main]]
-    identifier = "tags"
-    name = "标签"
-    url = "/tags/"
+    name = "About"
+    url = "/about/"
     weight = 4
 
-[markup]
-  [markup.highlight]
-    anchorLineNos = false
-    codeFences = true
-    guessSyntax = true
-    lineNos = true
-    noClasses = false
-    style = "monokai"
-
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+  [[menu.after]]
+    name = "GitHub"
+    url = "https://github.com/Ken-Chy129"
+    weight = 10

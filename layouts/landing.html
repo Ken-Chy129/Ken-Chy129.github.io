@@ -1,0 +1,35 @@
+{{/*
+  Minimal landing page for hugo-book.
+  Requirements:
+  - Keep hugo-book theme
+  - Home page has NO left menu/TOC
+  - Only show: avatar + name + subtitle + social icons
+*/}}
+
+{{ define "menu-container" }}{{ end }}
+{{ define "toc-container" }}{{ end }}
+
+{{ define "main" }}
+<article class="markdown book-article home-landing-min">
+  <section class="home-hero">
+    <img class="home-avatar" src="{{ "android-chrome-512x512.png" | relURL }}" alt="avatar" loading="eager" />
+
+    <h1 class="home-title">得过且过的勇者y</h1>
+    <p class="home-subtitle">What I cannot create, I do not understand.</p>
+
+    <div class="home-social">
+      <a class="social" href="https://github.com/Ken-Chy129" target="_blank" rel="noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.86 3.16 8.98 7.55 10.44.55.1.75-.23.75-.52v-1.84c-3.07.67-3.72-1.31-3.72-1.31-.5-1.27-1.23-1.61-1.23-1.61-1-.68.08-.67.08-.67 1.11.08 1.69 1.14 1.69 1.14.98 1.69 2.57 1.2 3.2.92.1-.71.38-1.2.69-1.47-2.45-.28-5.03-1.22-5.03-5.45 0-1.2.43-2.18 1.14-2.95-.11-.28-.49-1.41.11-2.94 0 0 .93-.3 3.05 1.13a10.6 10.6 0 0 1 2.78-.37c.94 0 1.89.13 2.78.37 2.12-1.43 3.05-1.13 3.05-1.13.6 1.53.22 2.66.11 2.94.71.77 1.14 1.75 1.14 2.95 0 4.24-2.58 5.16-5.04 5.44.39.34.74 1.01.74 2.04v3.02c0 .29.2.62.76.52 4.38-1.46 7.54-5.58 7.54-10.44C23.25 5.48 18.27.5 12 .5Z"/></svg>
+      </a>
+
+      <a class="social" href="https://blog.csdn.net/qq_25046827" target="_blank" rel="noreferrer" aria-label="CSDN">
+        <span class="csdn">C</span>
+      </a>
+
+      <a class="social" href="mailto:ken-chy129@qq.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+      </a>
+    </div>
+  </section>
+</article>
+{{ end }}
