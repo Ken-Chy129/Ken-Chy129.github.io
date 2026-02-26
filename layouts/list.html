@@ -5,7 +5,23 @@
     </article>
   {{ else }}
     {{ $pages := sort (sort .Pages "Date" "desc") "Weight" "desc" }}
-    {{ with index $pages 0 }}
+    {{ $target := false }}
+    {{ range $pages }}
+      {{ if not $target }}
+        {{ if .IsPage }}
+          {{ $target = . }}
+        {{ else if .IsSection }}
+          {{/* Section: find first page inside it */}}
+          {{ $sub := sort (sort .Pages "Date" "desc") "Weight" "desc" }}
+          {{ range $sub }}
+            {{ if and (not $target) .IsPage }}
+              {{ $target = . }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ with $target }}
       <script>window.location.replace("{{ .RelPermalink }}");</script>
       <meta http-equiv="refresh" content="0; url={{ .RelPermalink }}">
       <p>正在跳转到 <a href="{{ .RelPermalink }}">{{ .Title }}</a>…</p>

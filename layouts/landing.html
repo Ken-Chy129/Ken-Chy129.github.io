@@ -1,37 +1,23 @@
-{{/*
-  Minimal landing page for hugo-book.
-  Requirements:
-  - Keep hugo-book theme
-  - Home page has NO left menu/TOC
-  - Only show: avatar + name + subtitle + social icons
-*/}}
+{{/* Premium minimal landing – full viewport centered */}}
 
 {{ define "menu-container" }}{{ end }}
 {{ define "toc-container" }}{{ end }}
 
 {{ define "main" }}
-<article class="markdown book-article home-landing-min">
-  <section class="home-hero">
-    <img class="home-avatar" src="{{ "android-chrome-512x512.png" | relURL }}" alt="avatar" loading="eager" />
-
-    <h1 class="home-title">得过且过的勇者y</h1>
-    <p class="home-subtitle">What I cannot create, I do not understand.</p>
-    <p class="home-subtitle2">AI / Java / 工程化落地笔记</p>
-
-    <div class="home-social">
-      {{/* GitHub */}}
-      <a class="home-social-icon" href="https://github.com/Ken-Chy129" target="_blank" rel="noreferrer" aria-label="GitHub">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.86 3.16 8.98 7.55 10.44.55.1.75-.23.75-.52v-1.84c-3.07.67-3.72-1.31-3.72-1.31-.5-1.27-1.23-1.61-1.23-1.61-1-.68.08-.67.08-.67 1.11.08 1.69 1.14 1.69 1.14.98 1.69 2.57 1.2 3.2.92.1-.71.38-1.2.69-1.47-2.45-.28-5.03-1.22-5.03-5.45 0-1.2.43-2.18 1.14-2.95-.11-.28-.49-1.41.11-2.94 0 0 .93-.3 3.05 1.13a10.6 10.6 0 0 1 2.78-.37c.94 0 1.89.13 2.78.37 2.12-1.43 3.05-1.13 3.05-1.13.6 1.53.22 2.66.11 2.94.71.77 1.14 1.75 1.14 2.95 0 4.24-2.58 5.16-5.04 5.44.39.34.74 1.01.74 2.04v3.02c0 .29.2.62.76.52 4.38-1.46 7.54-5.58 7.54-10.44C23.25 5.48 18.27.5 12 .5Z"/></svg>
-      </a>
-      {{/* CSDN */}}
-      <a class="home-social-icon" href="https://blog.csdn.net/qq_25046827" target="_blank" rel="noreferrer" aria-label="CSDN">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.9 12.3c-.1-.2-.3-.3-.5-.3h-1.1c-.2 0-.4.1-.5.3-.6 1.3-1.5 2.4-2.6 3.2s-2.5 1.3-3.9 1.3c-1.9 0-3.5-.7-4.8-2s-2-3-2-4.8.7-3.5 2-4.8 3-2 4.8-2c1.1 0 2.2.3 3.1.8.9.5 1.7 1.2 2.3 2.1.1.2.3.3.5.3h1.1c.2 0 .3-.1.4-.2.1-.1.1-.3 0-.5-.8-1.4-1.9-2.5-3.3-3.3C16 1.4 14.5 1 13 1c-1.5 0-2.9.4-4.2 1.1-1.3.7-2.3 1.7-3 3C5.1 6.4 4.7 7.9 4.7 9.5s.4 3.1 1.1 4.4c.7 1.3 1.7 2.3 3 3 1.3.7 2.7 1.1 4.2 1.1 1.8 0 3.5-.5 5-1.5 1.4-1 2.5-2.4 3.2-4.1.1-.1.1-.3-.3-.1z"/></svg>
-      </a>
-      {{/* Email */}}
-      <a class="home-social-icon" href="mailto:ken-chy129@qq.com" aria-label="Email">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
-      </a>
-    </div>
-  </section>
-</article>
+<div class="landing">
+  <img class="landing-avatar" src="{{ "android-chrome-512x512.png" | relURL }}" alt="avatar" loading="eager" />
+  <h1 class="landing-name">得过且过的勇者y</h1>
+  <p class="landing-bio">What I cannot create, I do not understand.</p>
+  <div class="landing-links">
+    <a href="https://github.com/Ken-Chy129" target="_blank" rel="noreferrer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.86 3.16 8.98 7.55 10.44.55.1.75-.23.75-.52v-1.84c-3.07.67-3.72-1.31-3.72-1.31-.5-1.27-1.23-1.61-1.23-1.61-1-.68.08-.67.08-.67 1.11.08 1.69 1.14 1.69 1.14.98 1.69 2.57 1.2 3.2.92.1-.71.38-1.2.69-1.47-2.45-.28-5.03-1.22-5.03-5.45 0-1.2.43-2.18 1.14-2.95-.11-.28-.49-1.41.11-2.94 0 0 .93-.3 3.05 1.13a10.6 10.6 0 0 1 2.78-.37c.94 0 1.89.13 2.78.37 2.12-1.43 3.05-1.13 3.05-1.13.6 1.53.22 2.66.11 2.94.71.77 1.14 1.75 1.14 2.95 0 4.24-2.58 5.16-5.04 5.44.39.34.74 1.01.74 2.04v3.02c0 .29.2.62.76.52 4.38-1.46 7.54-5.58 7.54-10.44C23.25 5.48 18.27.5 12 .5Z"/></svg>
+    </a>
+    <a href="https://blog.csdn.net/qq_25046827" target="_blank" rel="noreferrer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.9 12.3c-.1-.2-.3-.3-.5-.3h-1.1c-.2 0-.4.1-.5.3-.6 1.3-1.5 2.4-2.6 3.2s-2.5 1.3-3.9 1.3c-1.9 0-3.5-.7-4.8-2s-2-3-2-4.8.7-3.5 2-4.8 3-2 4.8-2c1.1 0 2.2.3 3.1.8.9.5 1.7 1.2 2.3 2.1.1.2.3.3.5.3h1.1c.2 0 .3-.1.4-.2.1-.1.1-.3 0-.5-.8-1.4-1.9-2.5-3.3-3.3C16 1.4 14.5 1 13 1c-1.5 0-2.9.4-4.2 1.1-1.3.7-2.3 1.7-3 3C5.1 6.4 4.7 7.9 4.7 9.5s.4 3.1 1.1 4.4c.7 1.3 1.7 2.3 3 3 1.3.7 2.7 1.1 4.2 1.1 1.8 0 3.5-.5 5-1.5 1.4-1 2.5-2.4 3.2-4.1.1-.1.1-.3-.3-.1z"/></svg>
+    </a>
+    <a href="mailto:ken-chy129@qq.com">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+    </a>
+  </div>
+</div>
 {{ end }}

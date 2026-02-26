@@ -1,223 +1,448 @@
-// Custom overrides for hugo-book (stable)
+// ============================================================
+// Premium Minimal Theme – _custom.scss
+// ============================================================
 
-:root { --topbar-height: 56px; }
+// ---------- Fonts ----------
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
-/* ===== Global topbar ===== */
+:root {
+  --topbar-height: 60px;
+  --font-body: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --ease-out: cubic-bezier(.22, .61, .36, 1);
+  --radius: 8px;
+  --radius-lg: 12px;
+}
+
+// ---------- Light theme overrides ----------
+:root {
+  --body-background: #ffffff;
+  --body-font-color: #1a1a2e;
+  --color-link: #2563eb;
+  --color-visited-link: #6d28d9;
+
+  --gray-100: #f8fafc;
+  --gray-200: #e2e8f0;
+  --gray-500: #94a3b8;
+
+  --color-subtle: #64748b;
+  --color-border: #e2e8f0;
+  --color-surface: #f8fafc;
+  --color-surface-hover: #f1f5f9;
+  --color-accent: #2563eb;
+  --color-accent-soft: rgba(37, 99, 235, .08);
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.06);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,.08);
+}
+
+// ---------- Dark theme ----------
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-background: #0f1117;
+    --body-font-color: #e2e8f0;
+    --color-link: #60a5fa;
+    --color-visited-link: #a78bfa;
+
+    --gray-100: #1a1d27;
+    --gray-200: #252833;
+    --gray-500: #64748b;
+
+    --color-subtle: #94a3b8;
+    --color-border: #1e2130;
+    --color-surface: #161822;
+    --color-surface-hover: #1e2130;
+    --color-accent: #60a5fa;
+    --color-accent-soft: rgba(96, 165, 250, .1);
+
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.2);
+    --shadow-md: 0 4px 16px rgba(0,0,0,.3);
+    --shadow-lg: 0 8px 32px rgba(0,0,0,.4);
+  }
+}
+
+// ---------- Base ----------
+html {
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  padding-top: var(--topbar-height);
+  background: var(--body-background);
+  color: var(--body-font-color);
+  letter-spacing: -.01em;
+}
+
+// ============================================================
+// TOPBAR
+// ============================================================
 .site-topbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   height: var(--topbar-height);
   z-index: 200;
-  background: var(--body-background, #fff);
-  border-bottom: 1px solid rgba(127,127,127,.18);
+  background: rgba(255,255,255,.82);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid var(--color-border);
+  transition: background .3s var(--ease-out);
+}
+
+@media (prefers-color-scheme: dark) {
+  .site-topbar {
+    background: rgba(15,17,23,.78);
+  }
 }
 
 .site-topbar-inner {
-  max-width: 72rem;
+  max-width: 80rem;
   height: var(--topbar-height);
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
-.site-brand { font-weight: 800; text-decoration: none; }
+.site-brand {
+  font-weight: 700;
+  font-size: .92rem;
+  text-decoration: none;
+  color: var(--color-subtle) !important;
+  letter-spacing: -.01em;
+  flex-shrink: 0;
+  transition: opacity .2s var(--ease-out);
+
+  &:hover { opacity: .7; }
+}
 
 .site-nav {
   display: flex;
-  gap: .8rem;
+  gap: .25rem;
   flex-wrap: wrap;
 }
 
 .site-nav-item {
   text-decoration: none;
-  padding: .2rem .45rem;
+  padding: .42rem .85rem;
   border-radius: 6px;
-  opacity: .86;
-}
+  font-size: .88rem;
+  font-weight: 500;
+  color: var(--color-subtle);
+  transition: all .2s var(--ease-out);
 
-.site-nav-item.active {
-  background: rgba(127,127,127,.18);
-  opacity: 1;
+  &:hover {
+    color: var(--body-font-color);
+    background: var(--color-surface-hover);
+  }
+
+  &.active {
+    color: var(--color-accent);
+    background: var(--color-accent-soft);
+    font-weight: 600;
+  }
 }
 
 @media (max-width: 900px) {
   .site-nav { display: none; }
 }
 
-/* ===== Top search ===== */
+// ============================================================
+// SEARCH
+// ============================================================
 .book-menu .book-search { display: none; }
 
 .site-search {
-  flex: 0 0 320px;
+  flex: 0 0 280px;
   display: flex;
   justify-content: flex-end;
 }
 
 .site-search .book-search {
   width: 100%;
-  max-width: 320px;
+  max-width: 280px;
   position: relative;
 }
 
 .site-search input[type="text"],
 .site-search input[type="search"] {
   width: 100%;
-  height: 34px;
-  padding: 0 12px;
-  border-radius: 10px;
-  border: 1px solid rgba(127,127,127,.22);
-  background: rgba(127,127,127,.06);
+  height: 36px;
+  padding: 0 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--body-font-color);
+  font-family: var(--font-body);
+  font-size: .84rem;
   box-shadow: none !important;
   outline: none;
-}
+  transition: all .2s var(--ease-out);
 
-.site-search input[type="text"]:focus,
-.site-search input[type="search"]:focus {
-  background: var(--body-background, #fff);
-  border-color: rgba(0,120,255,.55);
+  &::placeholder {
+    color: var(--gray-500);
+  }
+
+  &:focus {
+    background: var(--body-background);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-accent-soft) !important;
+  }
 }
 
 .site-search #book-search-results {
-  display: none; /* default hidden; JS toggles */
+  display: none;
   position: absolute;
-  top: calc(100% + 6px);
-  left: 0;
-  right: 0;
+  top: calc(100% + 8px);
+  left: 0; right: 0;
   z-index: 300;
-  background: var(--body-background, #fff);
-  border: 1px solid rgba(127,127,127,.18);
-  border-radius: 12px;
-  box-shadow: 0 12px 28px rgba(0,0,0,.10);
+  background: var(--body-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
   max-height: 60vh;
   overflow: auto;
   list-style: none;
   margin: 0;
   padding: 6px;
-}
 
-.site-search #book-search-results.show { display: block; }
+  &.show { display: block; }
 
-.site-search #book-search-results li { list-style: none; margin: 0; padding: 0; }
-.site-search #book-search-results li a {
-  display: block;
-  padding: 8px 10px;
-  border-radius: 10px;
-  text-decoration: none;
-  line-height: 1.3;
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    line-height: 1.4;
+    font-size: .88rem;
+    transition: background .15s;
+
+    &:hover { background: var(--color-surface-hover); }
+  }
 }
-.site-search #book-search-results li a:hover { background: rgba(127,127,127,.12); }
 
 @media (max-width: 900px) {
   .site-search { flex: 1; }
   .site-search .book-search { max-width: none; }
 }
 
-/* ===== Layout spacing for fixed elements ===== */
-body { padding-top: var(--topbar-height); }
+// ============================================================
+// SIDEBAR MENU
+// ============================================================
+.book-menu {
+  font-size: .84rem;
 
-/* Hide Hugo Book's built-in mobile header (we have our own topbar)
-   - Still allow it on small screens EXCEPT the landing page (Home).
-*/
+  .book-menu-content {
+    top: var(--topbar-height) !important;
+    height: calc(100vh - var(--topbar-height)) !important;
+    padding: 1.2rem 1rem;
+    background: var(--body-background);
+  }
+
+  a, label {
+    color: var(--color-subtle);
+    font-weight: 450;
+    transition: color .15s var(--ease-out);
+  }
+
+  a:hover, label:hover {
+    color: var(--body-font-color);
+    opacity: 1 !important;
+  }
+
+  a.active {
+    color: var(--color-accent);
+    font-weight: 600;
+    position: relative;
+  }
+
+  label > img:last-child {
+    opacity: .4;
+    transition: transform .2s var(--ease-out), opacity .2s;
+  }
+
+  input.toggle:checked + label > img:last-child {
+    opacity: .6;
+  }
+
+  nav ul ul {
+    padding-inline-start: 1.1em;
+    margin-inline-start: .5em;
+  }
+}
+
+.book-section-flat {
+  margin: 1.2rem 0 .4rem;
+
+  > a, > span, > label {
+    font-weight: 650;
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: var(--gray-500);
+  }
+}
+
+// ============================================================
+// TOC (Right sidebar)
+// ============================================================
+.book-toc {
+  .book-toc-content {
+    top: var(--topbar-height) !important;
+    height: calc(100vh - var(--topbar-height)) !important;
+    padding: 1.5rem 1rem;
+  }
+
+  font-size: .78rem;
+
+  a {
+    color: var(--color-subtle);
+    transition: color .15s;
+
+    &:hover { color: var(--body-font-color); opacity: 1 !important; }
+  }
+
+  nav > ul > li:first-child { margin-top: 0; }
+}
+
+// ============================================================
+// CONTENT AREA
+// ============================================================
+.book-page {
+  padding: 2rem 2.5rem;
+}
+
 .book-header { display: none; }
 @media (max-width: 56rem) {
   .book-header { display: block; }
 }
 
-/* Home landing: never show the built-in header bar (avoids the extra "≡ Home" stripe). */
 body.book-layout-landing .book-header { display: none !important; }
+body.book-layout-landing .book-footer { display: none; }
+body.book-layout-landing .book-page { padding: 0; }
 
-.book-menu .book-menu-content {
-  top: var(--topbar-height) !important;
-  height: calc(100vh - var(--topbar-height)) !important;
+.book-footer {
+  margin-top: 3rem;
+  padding-top: 1.2rem;
+  font-size: .82rem;
+  color: var(--color-subtle);
 }
 
-.book-toc .book-toc-content {
-  top: var(--topbar-height) !important;
-  height: calc(100vh - var(--topbar-height)) !important;
-}
-
-/* ===== Google Fonts ===== */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@700&family=Inter:wght@400;500;600&display=swap');
-
-/* ===== Home hero ===== */
-.home-hero {
-  max-width: 720px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 4rem 1rem 3rem;
-}
-
-.home-avatar {
-  width: 200px;
-  height: 200px;
-  border-radius: 999px;
-  object-fit: cover;
-  background: radial-gradient(circle, rgba(210,225,245,.45) 0%, transparent 70%);
-  box-shadow: 0 8px 40px rgba(140,160,200,.25);
-  border: none;
-}
-
-.home-title {
-  margin: 1.6rem 0 .5rem;
-  font-family: 'Playfair Display', 'Noto Serif SC', 'Georgia', serif;
-  font-size: 2.4rem;
-  font-weight: 700;
-  letter-spacing: .02em;
-}
-
-.home-subtitle {
-  margin: 0;
-  font-family: 'Playfair Display', 'Noto Serif SC', 'Georgia', serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  font-style: italic;
-  color: rgba(60,60,60,.85);
-}
-
-.home-subtitle2 {
-  margin: .4rem 0 0;
-  font-family: 'Inter', sans-serif;
-  font-size: .95rem;
-  color: rgba(127,127,127,.8);
-}
-
-.home-social {
+// ============================================================
+// HOME LANDING
+// ============================================================
+.landing {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 1.6rem;
-  padding-top: 1.4rem;
-  border-top: 1px solid rgba(127,127,127,.15);
-  flex-wrap: wrap;
-}
-
-.home-social-icon {
-  display: inline-flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: rgba(60,60,60,.7);
-  text-decoration: none;
-  transition: color .2s, transform .2s;
+  text-align: center;
+  height: calc(100vh - var(--topbar-height));
+  padding: 0 1.5rem;
 }
 
-.home-social-icon svg {
-  width: 24px;
-  height: 24px;
+.landing-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px var(--color-border), var(--shadow-md);
 }
 
-.home-social-icon:hover {
-  color: rgba(30,30,30,.95);
-  transform: scale(1.15);
+.landing-name {
+  margin: 1.2rem 0 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.3;
 }
 
-/* Dark mode adjustments */
-.dark .home-subtitle { color: rgba(220,220,220,.85); }
-.dark .home-social-icon { color: rgba(200,200,200,.7); }
-.dark .home-social-icon:hover { color: rgba(255,255,255,.95); }
-.dark .home-avatar { box-shadow: 0 8px 40px rgba(0,0,0,.35); }
+.landing-bio {
+  margin: .5rem 0 0;
+  font-size: .88rem;
+  font-weight: 400;
+  color: var(--color-subtle);
+  letter-spacing: .01em;
+}
+
+.landing-links {
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  margin-top: 1.2rem;
+
+  a {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: var(--radius);
+    color: var(--color-subtle);
+    text-decoration: none;
+    transition: color .2s var(--ease-out), background .2s var(--ease-out);
+
+    svg { width: 18px; height: 18px; }
+
+    &:hover {
+      color: var(--color-accent);
+      background: var(--color-accent-soft);
+    }
+  }
+}
+
+// ============================================================
+// SCROLLBAR
+// ============================================================
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-200);
+  border-radius: 3px;
+
+  &:hover { background: var(--gray-500); }
+}
+
+// ============================================================
+// SELECTION
+// ============================================================
+::selection {
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+// ============================================================
+// RESPONSIVE
+// ============================================================
+@media screen and (min-width: 80rem) {
+  .book-page,
+  .book-menu .book-menu-content,
+  .book-toc .book-toc-content {
+    padding: 2rem 2rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .landing-avatar {
+    box-shadow: 0 0 0 1px var(--color-border);
+  }
+}

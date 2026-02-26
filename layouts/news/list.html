@@ -1,42 +1,70 @@
 {{ define "main" }}
-<article class="markdown book-article news-paper">
-  <header class="news-masthead">
-    <h1 class="news-masthead__title">{{ .Title }}</h1>
-    {{ with .Params.summary }}
-      <p class="news-masthead__meta">{{ . }}</p>
+  {{/* If showFirstChild is not explicitly false, redirect to first article */}}
+  {{ if eq .Params.showFirstChild false }}
+    {{/* Show news list page */}}
+  {{ else }}
+    {{ $target := false }}
+    {{ $pages := sort (sort .Pages "Date" "desc") "Weight" "desc" }}
+    {{ range $pages }}
+      {{ if not $target }}
+        {{ if .IsPage }}
+          {{ $target = . }}
+        {{ else if .IsSection }}
+          {{ $sub := sort (sort .Pages "Date" "desc") "Weight" "desc" }}
+          {{ range $sub }}
+            {{ if and (not $target) .IsPage }}
+              {{ $target = . }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
     {{ end }}
-  </header>
-
-  {{ if .Content }}
-    <div class="news-rule"></div>
-    <div class="book-article">
-      {{ .Content }}
-    </div>
-    <div class="news-rule"></div>
+    {{ with $target }}
+      <script>window.location.replace("{{ .RelPermalink }}");</script>
+      <meta http-equiv="refresh" content="0; url={{ .RelPermalink }}">
+      <p>正在跳转到 <a href="{{ .RelPermalink }}">{{ .Title }}</a>…</p>
+      {{ return }}
+    {{ end }}
   {{ end }}
 
-  <section class="news-list">
-    {{ $pages := .Pages }}
-    {{ with .Params.archiveMonth }}
-      {{ $m := . }}
-      {{/* Month archive page: filter all news pages by coverage prefix (YYYY-MM) */}}
-      {{ $pages = where site.RegularPages "Type" "news" }}
-      {{ $pages = where $pages ".Params.coverage" "ne" nil }}
-      {{ $pages = where $pages ".Params.coverage" "like" (printf "^%s" $m) }}
+  {{/* Fallback: show the news list */}}
+  <article class="markdown book-article news-paper">
+    <header class="news-masthead">
+      <h1 class="news-masthead__title">{{ .Title }}</h1>
+      {{ with .Params.summary }}
+        <p class="news-masthead__meta">{{ . }}</p>
+      {{ end }}
+    </header>
+
+    {{ if .Content }}
+      <div class="news-rule"></div>
+      <div class="book-article">
+        {{ .Content }}
+      </div>
+      <div class="news-rule"></div>
     {{ end }}
 
-    {{ range ($pages.ByDate.Reverse) }}
-      <div class="news-card">
-        <h3 class="news-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        <div class="news-card__meta">
-          {{ with .Params.coverage }}<span>Coverage: {{ . }}</span> · {{ end }}
-          <span>{{ .Date.Format "2006-01-02" }}</span>
+    <section class="news-list">
+      {{ $pages := .Pages }}
+      {{ with .Params.archiveMonth }}
+        {{ $m := . }}
+        {{ $pages = where site.RegularPages "Type" "news" }}
+        {{ $pages = where $pages ".Params.coverage" "ne" nil }}
+        {{ $pages = where $pages ".Params.coverage" "like" (printf "^%s" $m) }}
+      {{ end }}
+
+      {{ range ($pages.ByDate.Reverse) }}
+        <div class="news-card">
+          <h3 class="news-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <div class="news-card__meta">
+            {{ with .Params.coverage }}<span>Coverage: {{ . }}</span> · {{ end }}
+            <span>{{ .Date.Format "2006-01-02" }}</span>
+          </div>
+          {{ with .Summary }}
+            <div class="news-card__summary">{{ . }}</div>
+          {{ end }}
         </div>
-        {{ with .Summary }}
-          <div class="news-card__summary">{{ . }}</div>
-        {{ end }}
-      </div>
-    {{ end }}
-  </section>
-</article>
+      {{ end }}
+    </section>
+  </article>
 {{ end }}
