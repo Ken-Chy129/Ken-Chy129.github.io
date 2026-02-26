@@ -7,20 +7,8 @@ tags: [Linux, epoll]
 categories: [Networking]
 source: csdn
 source_id: "131630312"
+weight: 3
 ---
-
-系列文章：
-
-
-1. [深入理解Linux网络——内核是如何接收到网络包的](https://blog.csdn.net/qq_25046827/article/details/131606283)
-2. [深入理解Linux网络——内核与用户进程协作之同步阻塞方案（BIO）](https://blog.csdn.net/qq_25046827/article/details/131625686)
-3. [深入理解Linux网络——内核与用户进程协作之多路复用方案（epoll）](https://blog.csdn.net/qq_25046827/article/details/131630312)
-4. [深入理解Linux网络——内核是如何发送网络包的](https://blog.csdn.net/qq_25046827/article/details/131672373)
-5. [深入理解Linux网络——本机网络IO](https://blog.csdn.net/qq_25046827/article/details/131687835)
-6. [深入理解Linux网络——TCP连接建立过程（三次握手源码详解）](https://blog.csdn.net/qq_25046827/article/details/131744066)
-7. [深入理解Linux网络——TCP连接的开销](https://blog.csdn.net/qq_25046827/article/details/131794862)
-
-
 
 在上一部分的阻塞模式中（详见[深入理解Linux内核网络——内核与用户进程协作之同步阻塞方案（BIO）](https://blog.csdn.net/qq_25046827/article/details/131625686)），用户进程为了等待一个socket就得被阻塞掉，如果想要同时为多个用户提供服务要么就得创建对应数量的进程处理，要么就使用非阻塞的方式。进程不说创建，单论上下文切换就需要很大的耗时，而如果非阻塞的模式，就得轮询遍历，会导致CPU空转，并且每次轮询都需要进行一次系统调用，所以Linux提供了多路复用的机制来实现一个进程同时高效地处理多个连接。
 

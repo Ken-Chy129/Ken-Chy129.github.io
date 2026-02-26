@@ -8,20 +8,8 @@ categories: [Networking]
 source: csdn
 source_id: "131625686"
 source_url: "https://blog.csdn.net/qq_25046827/article/details/131625686"
+weight: 2
 ---
-
-系列文章：
-
-
-1. [深入理解Linux网络——内核是如何接收到网络包的](https://blog.csdn.net/qq_25046827/article/details/131606283)
-2. [深入理解Linux网络——内核与用户进程协作之同步阻塞方案（BIO）](https://blog.csdn.net/qq_25046827/article/details/131625686)
-3. [深入理解Linux网络——内核与用户进程协作之多路复用方案（epoll）](https://blog.csdn.net/qq_25046827/article/details/131630312)
-4. [深入理解Linux网络——内核是如何发送网络包的](https://blog.csdn.net/qq_25046827/article/details/131672373)
-5. [深入理解Linux网络——本机网络IO](https://blog.csdn.net/qq_25046827/article/details/131687835)
-6. [深入理解Linux网络——TCP连接建立过程（三次握手源码详解）](https://blog.csdn.net/qq_25046827/article/details/131744066)
-7. [深入理解Linux网络——TCP连接的开销](https://blog.csdn.net/qq_25046827/article/details/131794862)
-
-
 
 在上一部分中讲述了网络包是如何从网卡送到协议栈的（详见[深入理解Linux网络——内核是如何接收到网络包的](https://blog.csdn.net/qq_25046827/article/details/131606283)），接下来内核还有一项重要的工作，就是在协议栈接收处理完输入包后要通知到用户进程，如何用户进程接收到并处理这些数据。
 

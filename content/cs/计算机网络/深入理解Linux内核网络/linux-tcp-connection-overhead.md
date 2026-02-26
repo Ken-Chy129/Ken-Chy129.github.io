@@ -7,19 +7,8 @@ tags: [Linux, TCP]
 categories: [Networking]
 source: csdn
 source_id: "131794862"
+weight: 7
 ---
-
-系列文章：
-
-
-1. [深入理解Linux网络——内核是如何接收到网络包的](https://blog.csdn.net/qq_25046827/article/details/131606283)
-2. [深入理解Linux网络——内核与用户进程协作之同步阻塞方案（BIO）](https://blog.csdn.net/qq_25046827/article/details/131625686)
-3. [深入理解Linux网络——内核与用户进程协作之多路复用方案（epoll）](https://blog.csdn.net/qq_25046827/article/details/131630312)
-4. [深入理解Linux网络——内核是如何发送网络包的](https://blog.csdn.net/qq_25046827/article/details/131672373)
-5. [深入理解Linux网络——本机网络IO](https://blog.csdn.net/qq_25046827/article/details/131687835)
-6. [深入理解Linux网络——TCP连接建立过程（三次握手源码详解）](https://blog.csdn.net/qq_25046827/article/details/131744066)
-7. [深入理解Linux网络——TCP连接的开销](https://blog.csdn.net/qq_25046827/article/details/131794862)
-
 
 在应用程序里，我们使用多少内存都是自己能掌握和控制的，但是纵观Linux整台服务器，除了应用程序以外，内核也会申请和管理大量的内存。
 
