@@ -16,7 +16,16 @@
   {{ end }}
 
   <section class="news-list">
-    {{ range (.Pages.ByDate.Reverse) }}
+    {{ $pages := .Pages }}
+    {{ with .Params.archiveMonth }}
+      {{ $m := . }}
+      {{/* Month archive page: filter all news pages by coverage prefix (YYYY-MM) */}}
+      {{ $pages = where site.RegularPages "Type" "news" }}
+      {{ $pages = where $pages ".Params.coverage" "ne" nil }}
+      {{ $pages = where $pages ".Params.coverage" "like" (printf "^%s" $m) }}
+    {{ end }}
+
+    {{ range ($pages.ByDate.Reverse) }}
       <div class="news-card">
         <h3 class="news-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
         <div class="news-card__meta">
