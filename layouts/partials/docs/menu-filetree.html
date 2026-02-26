@@ -7,11 +7,7 @@
   {{ end }}
 {{ else if eq $sec "news" }}
   {{ with .Site.GetPage "/news" }}
-    <ul>
-      {{ range first 30 (.Pages.ByDate.Reverse) }}
-        <li><a href="{{ .RelPermalink }}" class="{{ if eq $.Page . }}active{{ end }}">{{ .Title }}</a></li>
-      {{ end }}
-    </ul>
+    {{ template "book-section-children" (dict "Section" . "CurrentPage" $) }}
   {{ end }}
 {{ else }}
   {{/* Home & other pages: do not show duplicate global nav in sidebar */}}
