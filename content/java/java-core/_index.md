@@ -1,4 +1,4 @@
 ---
 title: "Java 基础"
-weight: 1
+weight: 10
 ---
