@@ -1,0 +1,13 @@
+{{ define "main" }}
+  {{ if eq .Params.showFirstChild false }}
+    <article class="markdown book-article">
+      {{- .Content -}}
+    </article>
+  {{ else }}
+    {{ with index .Pages 0 }}
+      <script>window.location.replace("{{ .RelPermalink }}");</script>
+      <meta http-equiv="refresh" content="0; url={{ .RelPermalink }}">
+      <p>正在跳转到 <a href="{{ .RelPermalink }}">{{ .Title }}</a>…</p>
+    {{ end }}
+  {{ end }}
+{{ end }}
