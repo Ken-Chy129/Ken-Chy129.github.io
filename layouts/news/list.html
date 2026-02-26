@@ -1,0 +1,33 @@
+{{ define "main" }}
+<article class="markdown book-article news-paper">
+  <header class="news-masthead">
+    <h1 class="news-masthead__title">{{ .Title }}</h1>
+    {{ with .Params.summary }}
+      <p class="news-masthead__meta">{{ . }}</p>
+    {{ end }}
+  </header>
+
+  {{ if .Content }}
+    <div class="news-rule"></div>
+    <div class="book-article">
+      {{ .Content }}
+    </div>
+    <div class="news-rule"></div>
+  {{ end }}
+
+  <section class="news-list">
+    {{ range (.Pages.ByDate.Reverse) }}
+      <div class="news-card">
+        <h3 class="news-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <div class="news-card__meta">
+          {{ with .Params.coverage }}<span>Coverage: {{ . }}</span> · {{ end }}
+          <span>{{ .Date.Format "2006-01-02" }}</span>
+        </div>
+        {{ with .Summary }}
+          <div class="news-card__summary">{{ . }}</div>
+        {{ end }}
+      </div>
+    {{ end }}
+  </section>
+</article>
+{{ end }}

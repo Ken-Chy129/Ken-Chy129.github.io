@@ -1,0 +1,25 @@
+{{ define "main" }}
+<article class="markdown book-article news-paper">
+  <header class="news-masthead">
+    <h1 class="news-masthead__title">{{ .Title }}</h1>
+    <div class="news-masthead__meta">
+      {{ with .Params.coverage }}
+        <span>Coverage: <strong>{{ . }}</strong></span>
+      {{ end }}
+      {{ with .Date }}
+        <span>Published: <strong>{{ .Format "2006-01-02 15:04" }}</strong></span>
+      {{ end }}
+      {{ with .Params.tags }}
+        <span>
+          Tags:
+          {{ range $i, $t := . }}{{ if $i }}, {{ end }}<a href="{{ (printf "/tags/%s/" ($t | urlize)) | relURL }}">{{ $t }}</a>{{ end }}
+        </span>
+      {{ end }}
+    </div>
+  </header>
+
+  <div class="news-columns">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}
