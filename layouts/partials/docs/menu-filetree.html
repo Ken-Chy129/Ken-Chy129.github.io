@@ -19,7 +19,9 @@
 
 {{ define "book-section-children" }}
   <ul>
-    {{ range (where .Section.Pages "Params.bookHidden" "ne" true) }}
+    {{/* Sort: weight ASC → date ASC (chronological). Pages without weight (0) come first, sorted by date. */}}
+    {{ $pages := (where .Section.Pages "Params.bookHidden" "ne" true) }}
+    {{ range sort (sort $pages "Date") "Weight" }}
       {{ if .IsSection }}
         <li {{- if .Params.BookFlatSection }} class="book-section-flat" {{ end -}}>
           {{ template "book-page-link" (dict "Page" . "CurrentPage" $.CurrentPage) }}
