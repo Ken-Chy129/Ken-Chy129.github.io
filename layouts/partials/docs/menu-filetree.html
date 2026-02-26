@@ -1,7 +1,7 @@
 {{/* Custom: render sidebar menu per top-level section (ai/java). */}}
 {{ $sec := .Section }}
 
-{{ if or (eq $sec "ai") (eq $sec "java") }}
+{{ if or (eq $sec "ai") (eq $sec "java") (eq $sec "cs") }}
   {{ with .Site.GetPage (printf "/%s" $sec) }}
     {{ template "book-section-children" (dict "Section" . "CurrentPage" $) }}
   {{ end }}
