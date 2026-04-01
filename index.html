@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ken - Software Engineer</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0a192f;
+      --bg-light: #112240;
+      --text: #8892b0;
+      --text-light: #ccd6f6;
+      --heading: #e6f1ff;
+      --accent: #64ffda;
+      --accent-tint: rgba(100, 255, 218, 0.1);
+      --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    a:hover { color: var(--heading); }
+
+    ::selection {
+      background: var(--accent-tint);
+      color: var(--accent);
+    }
+
+    /* ---- Layout ---- */
+    .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      .wrapper {
+        display: flex;
+        gap: 4rem;
+        padding: 0 4rem;
+      }
+      .sidebar {
+        position: sticky;
+        top: 0;
+        width: 420px;
+        flex-shrink: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 6rem 0;
+      }
+      .main {
+        flex: 1;
+        padding: 6rem 0;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      .sidebar { padding: 3rem 0 1rem; }
+      .main { padding: 0 0 3rem; }
+    }
+
+    /* ---- Sidebar ---- */
+    .sidebar h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--heading);
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .sidebar .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-light);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .sidebar .bio {
+      font-size: 0.95rem;
+      max-width: 320px;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Nav */
+    .nav { display: none; }
+    @media (min-width: 1024px) {
+      .nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+    }
+
+    .nav a {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--text);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav a::before {
+      content: "";
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--text);
+      transition: width 0.3s, background 0.3s;
+    }
+
+    .nav a:hover,
+    .nav a.active {
+      color: var(--heading);
+    }
+
+    .nav a:hover::before,
+    .nav a.active::before {
+      width: 64px;
+      background: var(--heading);
+    }
+
+    /* Social */
+    .social {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    .social a {
+      color: var(--text);
+      transition: color 0.2s, transform 0.2s;
+    }
+    .social a:hover {
+      color: var(--heading);
+      transform: translateY(-2px);
+    }
+    .social svg { width: 22px; height: 22px; display: block; }
+
+    /* ---- Main sections ---- */
+    section { margin-bottom: 5rem; }
+
+    .section-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--heading);
+      margin-bottom: 2rem;
+      display: none;
+    }
+
+    @media (max-width: 1023px) {
+      .section-title {
+        display: block;
+        position: sticky;
+        top: 0;
+        background: var(--bg);
+        padding: 1rem 0;
+        z-index: 10;
+        border-bottom: 1px solid var(--bg-light);
+      }
+    }
+
+    /* Cards */
+    .card {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 1.5rem;
+      padding: 1.25rem 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      background: var(--accent-tint);
+      box-shadow: inset 0 0 0 1px rgba(100, 255, 218, 0.1);
+    }
+
+    @media (max-width: 640px) {
+      .card {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+    }
+
+    .card .time {
+      font-size: 0.8rem;
+      font-family: var(--font-mono);
+      color: var(--text);
+      padding-top: 0.25rem;
+      white-space: nowrap;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-light);
+      margin-bottom: 0.5rem;
+      transition: color 0.2s;
+      line-height: 1.3;
+    }
+
+    .card:hover h3 { color: var(--accent); }
+
+    .card h3 .arrow {
+      display: inline-block;
+      font-size: 0.85rem;
+      margin-left: 0.25rem;
+      transition: transform 0.2s;
+    }
+
+    .card:hover h3 .arrow {
+      transform: translate(3px, -3px);
+    }
+
+    .card .company {
+      color: var(--text);
+      font-weight: 400;
+    }
+
+    .card p {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-bottom: 0.75rem;
+    }
+
+    .card ul {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      padding-left: 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .card li { margin-bottom: 0.3rem; }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .tag {
+      font-size: 0.72rem;
+      font-family: var(--font-mono);
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      background: var(--accent-tint);
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    /* About */
+    .about p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .about a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .about a:hover { color: var(--heading); }
+
+    /* Site links */
+    .site-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 2rem;
+    }
+
+    .site-link {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 1.5rem;
+      padding: 1.25rem 1.5rem;
+      border-radius: 8px;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    @media (max-width: 640px) {
+      .site-link { grid-template-columns: 1fr; gap: 0.5rem; }
+    }
+
+    .site-link:hover {
+      background: var(--accent-tint);
+      box-shadow: inset 0 0 0 1px rgba(100, 255, 218, 0.1);
+      color: inherit;
+    }
+
+    .site-link-title {
+      font-size: 0.8rem;
+      font-family: var(--font-mono);
+      color: var(--text);
+      padding-top: 0.25rem;
+    }
+
+    .site-link-heading {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-light);
+      margin-bottom: 0.5rem;
+      transition: color 0.2s;
+    }
+
+    .site-link:hover .site-link-heading { color: var(--accent); }
+
+    .site-link-heading .arrow {
+      display: inline-block;
+      font-size: 0.85rem;
+      margin-left: 0.25rem;
+      transition: transform 0.2s;
+    }
+
+    .site-link:hover .site-link-heading .arrow {
+      transform: translate(3px, -3px);
+    }
+
+    .site-link-desc {
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* Stats */
+    .stats {
+      display: flex;
+      gap: 2rem;
+      margin-top: 1.5rem;
+      padding: 1rem 0;
+    }
+
+    .stat-num {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent);
+      font-family: var(--font-mono);
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--text);
+      margin-top: 0.15rem;
+    }
+
+    /* Footer */
+    .footer {
+      font-size: 0.8rem;
+      color: var(--text);
+      padding: 2rem 0;
+      line-height: 1.6;
+    }
+
+    .footer a { color: var(--text-light); }
+    .footer a:hover { color: var(--accent); }
+
+    /* Cursor glow effect */
+    .glow {
+      pointer-events: none;
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(100, 255, 218, 0.07) 0%, transparent 70%);
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      transition: opacity 0.3s;
+    }
+
+    .wrapper { position: relative; z-index: 1; }
+  </style>
+</head>
+<body>
+  <div class="glow" id="glow"></div>
+
+  <div class="wrapper">
+    <!-- Left sidebar -->
+    <header class="sidebar">
+      <div>
+        <h1>Ken</h1>
+        <p class="subtitle">Software Engineer</p>
+        <p class="bio">万丈高楼平地起，勿在浮沙筑高台。</p>
+
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+        </nav>
+      </div>
+
+      <div class="social">
+        <a href="https://github.com/Ken-Chy129" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.86 3.16 8.98 7.55 10.44.55.1.75-.23.75-.52v-1.84c-3.07.67-3.72-1.31-3.72-1.31-.5-1.27-1.23-1.61-1.23-1.61-1-.68.08-.67.08-.67 1.11.08 1.69 1.14 1.69 1.14.98 1.69 2.57 1.2 3.2.92.1-.71.38-1.2.69-1.47-2.45-.28-5.03-1.22-5.03-5.45 0-1.2.43-2.18 1.14-2.95-.11-.28-.49-1.41.11-2.94 0 0 .93-.3 3.05 1.13a10.6 10.6 0 0 1 2.78-.37c.94 0 1.89.13 2.78.37 2.12-1.43 3.05-1.13 3.05-1.13.6 1.53.22 2.66.11 2.94.71.77 1.14 1.75 1.14 2.95 0 4.24-2.58 5.16-5.04 5.44.39.34.74 1.01.74 2.04v3.02c0 .29.2.62.76.52 4.38-1.46 7.54-5.58 7.54-10.44C23.25 5.48 18.27.5 12 .5Z"/></svg>
+        </a>
+        <a href="https://blog.csdn.net/qq_25046827" target="_blank" rel="noreferrer" aria-label="CSDN">
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M21.9 12.3c-.1-.2-.3-.3-.5-.3h-1.1c-.2 0-.4.1-.5.3-.6 1.3-1.5 2.4-2.6 3.2s-2.5 1.3-3.9 1.3c-1.9 0-3.5-.7-4.8-2s-2-3-2-4.8.7-3.5 2-4.8 3-2 4.8-2c1.1 0 2.2.3 3.1.8.9.5 1.7 1.2 2.3 2.1.1.2.3.3.5.3h1.1c.2 0 .3-.1.4-.2.1-.1.1-.3 0-.5-.8-1.4-1.9-2.5-3.3-3.3C16 1.4 14.5 1 13 1c-1.5 0-2.9.4-4.2 1.1-1.3.7-2.3 1.7-3 3C5.1 6.4 4.7 7.9 4.7 9.5s.4 3.1 1.1 4.4c.7 1.3 1.7 2.3 3 3 1.3.7 2.7 1.1 4.2 1.1 1.8 0 3.5-.5 5-1.5 1.4-1 2.5-2.4 3.2-4.1.1-.1.1-.3-.3-.1z"/></svg>
+        </a>
+        <a href="mailto:ken-chy129@qq.com" aria-label="Email">
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+        </a>
+      </div>
+    </header>
+
+    <!-- Right main content -->
+    <main class="main">
+
+      <!-- About -->
+      <section id="about" class="about">
+        <h2 class="section-title">About</h2>
+        <p>我是一名后端工程师，毕业于<a href="https://www.jnu.edu.cn/" target="_blank">暨南大学</a>网络工程专业。目前在<a href="https://www.bytedance.com/" target="_blank">字节跳动</a>工作，此前在<a href="https://www.alibaba.com/" target="_blank">阿里巴巴</a>参与淘宝即时零售业务的开发。</p>
+        <p>日常关注 AI 工程化落地与后端系统架构方向，喜欢在 JVM 调优、性能优化这类"往深处挖"的事情上花时间。工作之外，我会把学到的东西整理成文章，是<a href="https://blog.csdn.net/qq_25046827" target="_blank">阿里云开发者社区专家博主</a>，全网文章阅读量 80w+。</p>
+
+        <div class="site-links">
+          <a class="site-link" href="/wiki/">
+            <span class="site-link-title">Wiki</span>
+            <div>
+              <div class="site-link-heading">技术知识库 <span class="arrow">&nearr;</span></div>
+              <div class="site-link-desc">AI / Java / 操作系统 / 数据库 / 计算机网络等领域的深度笔记与总结。</div>
+            </div>
+          </a>
+          <a class="site-link" href="/news/">
+            <span class="site-link-title">News</span>
+            <div>
+              <div class="site-link-heading">AI 技术日报 <span class="arrow">&nearr;</span></div>
+              <div class="site-link-desc">每日 AI 领域资讯精选，追踪前沿动态。</div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="card">
+          <div class="time">2025.06 &mdash; 至今</div>
+          <div>
+            <h3>开发工程师 <span class="company">&middot; 字节跳动</span></h3>
+            <p>负责 AnyGen 的开发。</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="time">2024.07 &mdash; 2025.06</div>
+          <div>
+            <h3>后端工程师 <span class="company">&middot; 浙江天猫技术有限公司</span></h3>
+            <p>负责淘宝小时达业务选搭投领域开发，建设即时零售心智、优化导购链路体验。</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="time">2023.11 &mdash; 2024.02</div>
+          <div>
+            <h3>后端工程师（实习） <span class="company">&middot; 浙江天猫技术有限公司</span></h3>
+            <p>负责淘宝买菜近场零售业务判店域开发，门店管理模块的前后端开发与运营提效。</p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Projects -->
+      <section id="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <a class="card" href="https://github.com/Ken-Chy129" target="_blank" style="text-decoration:none;color:inherit;">
+          <div class="time">2024</div>
+          <div>
+            <h3>Master <span class="arrow">&nearr;</span></h3>
+            <p>应用运行时掌控工具。提供统一方式修改应用运行时变量，动态配置、功能开关、逻辑控制；基于 Java Agent 实时监控系统信息并采集运行时数据，辅助问题定位。</p>
+            <ul>
+              <li>客户端 SDK 自动上报接口，集成便捷</li>
+              <li>注解标识可管控字段，支持自定义回调处理器</li>
+              <li>场景模板与预案功能，一键推送指定配置</li>
+              <li>基于 Java Agent 和 JMX，支持线程、内存、GC、类加载等多种指标采集与分析</li>
+            </ul>
+          </div>
+        </a>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    // Cursor glow
+    const glow = document.getElementById('glow');
+    document.addEventListener('mousemove', e => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top = e.clientY + 'px';
+    });
+
+    // Active nav on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav a');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          const active = document.querySelector('.nav a[href="#' + entry.target.id + '"]');
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -60% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+</body>
+</html>
