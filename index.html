@@ -434,8 +434,8 @@
       <!-- About -->
       <section id="about" class="about">
         <h2 class="section-title">About</h2>
-        <p>我是一名后端工程师，毕业于<a href="https://www.jnu.edu.cn/" target="_blank">暨南大学</a>网络工程专业。目前在<a href="https://www.bytedance.com/" target="_blank">字节跳动</a>工作，此前在<a href="https://www.alibaba.com/" target="_blank">阿里巴巴</a>参与淘宝即时零售业务的开发。</p>
-        <p>日常关注 AI 工程化落地与后端系统架构方向，喜欢在 JVM 调优、性能优化这类"往深处挖"的事情上花时间。工作之外，我会把学到的东西整理成文章，是<a href="https://blog.csdn.net/qq_25046827" target="_blank">阿里云开发者社区专家博主</a>，全网文章阅读量 80w+。</p>
+        <p>毕业于<a href="https://www.jnu.edu.cn/" target="_blank">暨南大学</a>网络工程专业，目前在<a href="https://www.bytedance.com/" target="_blank">字节跳动</a>从事 AI Agent 方向的开发，此前在<a href="https://www.alibaba.com/" target="_blank">阿里巴巴</a>参与淘宝即时零售业务的开发。</p>
+        <p>日常关注 AI 工程化落地与后端系统架构方向。</p>
 
         <div class="site-links">
           <a class="site-link" href="/wiki/">
@@ -460,15 +460,15 @@
         <h2 class="section-title">Experience</h2>
 
         <div class="card">
-          <div class="time">2025.06 &mdash; 至今</div>
+          <div class="time">2025.07 &mdash; 至今</div>
           <div>
             <h3>开发工程师 <span class="company">&middot; 字节跳动</span></h3>
-            <p>负责 AnyGen 的开发。</p>
+            <p>负责 AnyGen AI 内容生成平台的后端开发与 Agent 开发，涵盖 PPT、文档、架构图、研究报告等多种内容类型的生成链路建设。</p>
           </div>
         </div>
 
         <div class="card">
-          <div class="time">2024.07 &mdash; 2025.06</div>
+          <div class="time">2024.07 &mdash; 2025.07</div>
           <div>
             <h3>后端工程师 <span class="company">&middot; 浙江天猫技术有限公司</span></h3>
             <p>负责淘宝小时达业务选搭投领域开发，建设即时零售心智、优化导购链路体验。</p>
@@ -489,17 +489,27 @@
       <section id="projects">
         <h2 class="section-title">Projects</h2>
 
-        <a class="card" href="https://github.com/Ken-Chy129" target="_blank" style="text-decoration:none;color:inherit;">
-          <div class="time">2024</div>
+        <a class="card" href="https://github.com/AnyGenIO/anygen-cli" target="_blank" style="text-decoration:none;color:inherit;">
+          <div class="time">2026</div>
+          <div>
+            <h3>AnyGen CLI <span class="arrow">&nearr;</span></h3>
+            <p>AnyGen AI 内容生成平台的命令行工具。基于 Discovery Document 自动生成命令，支持结构化 JSON 输出，可无缝集成 AI Agent 工作流。覆盖 PPT、文档、架构图、数据分析、研究报告等多种内容类型的一键生成。</p>
+          </div>
+        </a>
+
+        <a class="card" href="https://github.com/Ken-Chy129/clawhub-scanner" target="_blank" style="text-decoration:none;color:inherit;">
+          <div class="time">2026</div>
+          <div>
+            <h3>ClawHub Scanner <span class="arrow">&nearr;</span></h3>
+            <p>专为 AI Agent 技能/插件设计的安全检测工具。采用静态正则分析 + LLM 五维度安全评估的多层扫描架构，检测 Shell 注入、数据窃取、加密挖矿、Prompt 注入等威胁，可集成到 CI/CD 流程中。</p>
+          </div>
+        </a>
+
+        <a class="card" href="https://github.com/Ken-Chy129/master" target="_blank" style="text-decoration:none;color:inherit;">
+          <div class="time">2025</div>
           <div>
             <h3>Master <span class="arrow">&nearr;</span></h3>
             <p>应用运行时掌控工具。提供统一方式修改应用运行时变量，动态配置、功能开关、逻辑控制；基于 Java Agent 实时监控系统信息并采集运行时数据，辅助问题定位。</p>
-            <ul>
-              <li>客户端 SDK 自动上报接口，集成便捷</li>
-              <li>注解标识可管控字段，支持自定义回调处理器</li>
-              <li>场景模板与预案功能，一键推送指定配置</li>
-              <li>基于 Java Agent 和 JMX，支持线程、内存、GC、类加载等多种指标采集与分析</li>
-            </ul>
           </div>
         </a>
       </section>
